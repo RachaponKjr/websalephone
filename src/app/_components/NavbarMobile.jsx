@@ -4,7 +4,7 @@ import React from 'react'
 const NavbarMobile = () => {
     return (
         <>
-            <VStack w={'full'} h={'max-content'} spacing={4} bg={'#7F3A8A'} px={6} pt={8} pb={6} rounded={"0 0 20px 20px"} boxShadow={'lg'}>
+            <VStack w={'full'} h={'max-content'} spacing={4} bg={'#7F3A8A'} px={6} pt={8} pb={6} rounded={"0 0 20px 20px"} boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px'}>
                 <Flex justifyContent={'space-between'} w={'full'} >
                     <Box w={"20%"}></Box>
                     {/* ชื่อ เว็บ */}
