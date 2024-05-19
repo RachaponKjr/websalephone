@@ -4,8 +4,8 @@ import React from 'react'
 const NavbarMobile = () => {
     return (
         <>
-            <VStack display={{base: 'block', md: 'none'}} w={'full'} h={'max-content'} spacing={4} bg={'#7F3A8A'} px={6} pt={8} pb={6} rounded={"0 0 20px 20px"} boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px'}>
-                <Flex justifyContent={'space-between'} w={'full'} >
+            <VStack display={{base: 'block', md: 'none'}} w={'full'} h={'max-content'} spacing={0} bg={'#7F3A8A'} px={6} pt={8} pb={7} rounded={"0 0 20px 20px"} boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px'}>
+                <Flex mb={4} justifyContent={'space-between'} w={'full'} >
                     <Box w={"20%"}></Box>
                     {/* ชื่อ เว็บ */}
                     <Box w={"60%"} textAlign={'center'}>
