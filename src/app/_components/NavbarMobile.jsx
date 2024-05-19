@@ -31,7 +31,7 @@ const NavbarMobile = () => {
                         </Box>
                     </Flex>
                 </Flex>
-                <Flex h={'2rem'} alignItems={'center'} w={'full'} gap={4}>
+                <Flex h={'2.5rem'} alignItems={'center'} w={'full'} gap={5}>
                     <Box ml={2}>
                         <svg width="20" height="20" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 1L17 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -40,7 +40,7 @@ const NavbarMobile = () => {
                         </svg>
                     </Box>
                     <Box display={'flex'} flexGrow={1} h={'full'}>
-                        <Input placeholder='ค้นหาสินค้า' h={'full'} bg={'white'} />
+                        <Input placeholder='ค้นหาสินค้า' h={'full'} rounded={'xl'} bg={'white'} />
                     </Box>
                 </Flex>
             </VStack>
