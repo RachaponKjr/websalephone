@@ -4,34 +4,34 @@ import React from 'react'
 
 const Navbar = () => {
     return (
-        <Box h={'115px'} w={"100%"} borderBottom={"3px solid #7F3A8A"} boxShadow={"rgba(0, 0, 0, 0.24) 0px 3px 8px"}>
+        <Box display={{base: 'none', md: 'block'}} h={'115px'} w={"100%"} borderBottom={"3px solid #7F3A8A"} boxShadow={"rgba(0, 0, 0, 0.24) 0px 3px 8px"}>
             <Container maxW='container.xl' h='full'>
                 <Stack h='full' direction={'row'} alignItems={'center'} justifyContent={'space-between'}>
-                    <Flex flexDirection={'row'} alignItems={'center'} gap={4}>
+                    <Flex flexDirection={'row'} alignItems={'center'} gap={{md: 2, lg: 4}}>
                         {/* รูป logo ร้านค้า */}
-                        <Flex flexDirection={'row'} alignItems={'center'} gap={4}>
+                        <Flex flexDirection={'row'} alignItems={'center'} gap={{md:2,lg:4}}>
                             <Box display={'flex'} overflow={'hidden'} position={'relative'} flexDirection={'row'} alignItems={'center'} w={'80px'} h={'80px'} ring={2} ringColor={'#7F3A8A'} rounded={'full'}>
-                                <Box w={'4rem'} h={'4rem'} position={'relative'} top={1} left={-2.5} bgImage={'./imgs/navbar-imgs/logo.png'} bgRepeat={'no-repeat'} bgSize={'contain'}></Box>
+                                <Box w={{md:'4rem',lg:'4rem'}} h={'4rem'} position={'relative'} top={1} left={-2.5} bgImage={'./imgs/navbar-imgs/logo.png'} bgRepeat={'no-repeat'} bgSize={'contain'}></Box>
                                 <Box as='h6' position={'absolute'} fontSize={'2xl'} fontWeight={'bold'} left={10} >TM</Box>
                             </Box>
-                            <Text as='h1' fontSize={'32px'} fontWeight={'bold'}>
+                            <Text as='h1' fontSize={'clamp(18px, 1vw, 32px)'} fontWeight={'bold'} whiteSpace={'nowrap'}>
                                 TunTun Mobile
                             </Text>
                         </Flex>
-                        <Flex gap={2}>
+                        <Flex gap={{base: 1, lg: 2}}>
                             {/* Link กดไปหน้าต่าง */}
-                            <Box fontSize={'18px'}>
-                                <Link href={'/'} style={{ textDecoration: 'none', padding: '8px 16px' }}>
+                            <Box display={'flex'} alignItems={'center'} fontSize={'clamp(14px, 1vw, 18px)'} w={'max-content'} px={2} h={'2rem'}>
+                                <Link href={'/'} style={{ textDecoration: 'none'}}>
                                     ขายโทรศัพท์
                                 </Link>
                             </Box>
-                            <Box fontSize={'18px'}>
-                                <Link href={'/'} style={{ textDecoration: 'none', padding: '8px 16px' }}>
+                            <Box display={'flex'} alignItems={'center'}  fontSize={'clamp(14px, 1vw, 18px)'} w={'max-content'} px={2} h={'2rem'}>
+                                <Link href={'/'} style={{ textDecoration: 'none'}}>
                                     ซ่อมโทรศัพท์
                                 </Link>
                             </Box>
-                            <Box fontSize={'18px'}>
-                                <Link href={'/'} style={{ textDecoration: 'none', padding: '8px 16px' }}>
+                            <Box display={'flex'} alignItems={'center'}  fontSize={'clamp(14px, 1vw, 18px)'} w={'max-content'} px={2} h={'2rem'}>
+                                <Link href={'/'} style={{ textDecoration: 'none'}}>
                                     เกี่ยวกับเรา
                                 </Link>
                             </Box>
@@ -57,7 +57,7 @@ const Navbar = () => {
                             </Box>
                         </Stack>
                         {/* เบอร์โทร */}
-                        <Text as={'p'} fontSize={'30px'} fontWeight={'bold'}>091-234-5678</Text>
+                        <Text as={'p'} fontSize={'clamp(12px, 2vw, 26px)'} fontWeight={'bold'}>091-234-5678</Text>
                     </Flex>
                 </Stack>
             </Container>

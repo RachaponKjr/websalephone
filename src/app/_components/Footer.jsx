@@ -8,9 +8,9 @@ const Footer = () => {
     <Stack spacing={0}>
         <Box w={'full'} h={'max-content'} bg={'#7F3A8A'}>
             <Container maxW='container.xl' h='full'>
-                <VStack px={6} pt={6} spacing={6} pb={14}>
-                    <Text fontSize={'35px'} fontWeight={'bold'} color={'white'}>TunTun Mobile ดียังไง?</Text>
-                    <Grid templateColumns='repeat(4, 1fr)' gap={4} w={'full'}>
+                <VStack px={{base: 0, lg: 6}} pt={6} spacing={6} pb={14}>
+                    <Text fontSize={'clamp(28px, 3vw, 32px)'} fontWeight={'bold'} color={'white'}>TunTun Mobile ดียังไง?</Text>
+                    <Grid templateColumns={{base: 'repeat(2,minmax(0,1fr))', md:'repeat(4,minmax(0,1fr))'}} gap={4} w={'full'}>
                         <GridItem justifySelf={'center'}>
                             <Flex flexDirection={'column'} gap={4} alignItems={'center'}>
                                 {/* รูปภาพ */}
@@ -19,10 +19,10 @@ const Footer = () => {
                                 </Box>
                                 {/* คำอธิบาย */}
                                 <Flex flexDirection={'column'} gap={1} textAlign={'center'} color={'white'}>
-                                    <Text as={'h4'} fontSize={'30px'} fontWeight={'bold'}>น่าเชื่อถือ</Text>
+                                    <Text as={'h4'} fontSize={'clamp(18px, 3vw, 30px)'} fontWeight={'bold'}>น่าเชื่อถือ</Text>
                                     <Flex flexDirection={'column'}>
-                                        <Text as={'h6'} fontSize={'14px'} fontWeight={'regular'}>มีประสบการณ์การรับซื้อ</Text>
-                                        <Text as={'h6'} fontSize={'14px'} fontWeight={'regular'}>ไม่โกงอย่างแน่นอน</Text>
+                                        <Text as={'h6'} fontSize={'clamp(12px, 3vw, 14px)'} fontWeight={'regular'}>มีประสบการณ์การรับซื้อ</Text>
+                                        <Text as={'h6'} fontSize={'clamp(12px, 3vw, 14px)'} fontWeight={'regular'}>ไม่โกงอย่างแน่นอน</Text>
                                     </Flex>
                                 </Flex>
                             </Flex>
@@ -35,10 +35,10 @@ const Footer = () => {
                                 </Box>
                                 {/* คำอธิบาย */}
                                 <Flex flexDirection={'column'} gap={1} textAlign={'center'} color={'white'}>
-                                    <Text as={'h4'} fontSize={'30px'} fontWeight={'bold'}>สะดวกสบาย</Text>
+                                    <Text as={'h4'} fontSize={'clamp(18px, 3vw, 30px)'} fontWeight={'bold'}>สะดวกสบาย</Text>
                                     <Flex flexDirection={'column'}>
-                                        <Text as={'h6'} fontSize={'14px'} fontWeight={'regular'}>มีพนักงานไปรับสินค้า</Text>
-                                        <Text as={'h6'} fontSize={'14px'} fontWeight={'regular'}>ถึงบ้านของคุณ</Text>
+                                        <Text as={'h6'} fontSize={'clamp(12px, 3vw, 14px)'} fontWeight={'regular'}>มีพนักงานไปรับสินค้า</Text>
+                                        <Text as={'h6'} fontSize={'clamp(12px, 3vw, 14px)'} fontWeight={'regular'}>ถึงบ้านของคุณ</Text>
                                     </Flex>
                                 </Flex>
                             </Flex>
@@ -46,15 +46,15 @@ const Footer = () => {
                         <GridItem justifySelf={'center'}>
                             <Flex flexDirection={'column'} gap={4} alignItems={'center'}>
                                 {/* รูปภาพ */}
-                                <Box position={'relative'} w={'6rem'} aspectRatio={'1/1'}>
+                                <Box position={'relative'} maxW={'100%'} w={'6rem'} aspectRatio={'1/1'}>
                                     <Image src={'/imgs/footer-imgs/linechart.png'} alt={'logo'} fill style={{objectFit: 'contain'}} />
                                 </Box>
                                 {/* คำอธิบาย */}
                                 <Flex flexDirection={'column'} gap={1} textAlign={'center'} color={'white'}>
-                                    <Text as={'h4'} fontSize={'30px'} fontWeight={'bold'}>ให้ราคาสูง</Text>
+                                    <Text as={'h4'} fontSize={'clamp(18px, 3vw, 30px)'} fontWeight={'bold'}>ให้ราคาสูง</Text>
                                     <Flex flexDirection={'column'}>
-                                        <Text as={'h6'} fontSize={'14px'} fontWeight={'regular'}>รับซื้อสินค้าในราคาสูง</Text>
-                                        <Text as={'h6'} fontSize={'14px'} fontWeight={'regular'}>เมื่อเทียบกับเจ้าอื่นๆ</Text>
+                                        <Text as={'h6'} fontSize={'clamp(12px, 3vw, 14px)'} fontWeight={'regular'}>รับซื้อสินค้าในราคาสูง</Text>
+                                        <Text as={'h6'} fontSize={'clamp(12px, 3vw, 14px)'} fontWeight={'regular'}>เมื่อเทียบกับเจ้าอื่นๆ</Text>
                                     </Flex>
                                 </Flex>
                             </Flex>
@@ -67,10 +67,10 @@ const Footer = () => {
                                 </Box>
                                 {/* คำอธิบาย */}
                                 <Flex flexDirection={'column'} gap={1} textAlign={'center'} color={'white'}>
-                                    <Text as={'h4'} fontSize={'30px'} fontWeight={'bold'}>ได้เงินทันที</Text>
+                                    <Text as={'h4'} fontSize={'clamp(18px, 3vw, 30px)'} fontWeight={'bold'}>ได้เงินทันที</Text>
                                     <Flex flexDirection={'column'}>
-                                        <Text as={'h6'} fontSize={'14px'} fontWeight={'regular'}>โอนเงินทันทีเมื่อทำการ</Text>
-                                        <Text as={'h6'} fontSize={'14px'} fontWeight={'regular'}>ตกลงซื้อขายกันเรียบร้อย</Text>
+                                        <Text as={'h6'} fontSize={'clamp(12px, 3vw, 14px)'} fontWeight={'regular'}>โอนเงินทันทีเมื่อทำการ</Text>
+                                        <Text as={'h6'} fontSize={'clamp(12px, 3vw, 14px)'} fontWeight={'regular'}>ตกลงซื้อขายกันเรียบร้อย</Text>
                                     </Flex>
                                 </Flex>
                             </Flex>
@@ -81,7 +81,7 @@ const Footer = () => {
         </Box>
        {/* copyright */}
         <Flex alignItems={'center'} justifyContent={'center'} w={'full'} h={'46px'}>
-            <Text color={'#7F3A8A'} fontSize={'15px'} fontWeight={'bold'}>Copyright © 2024 TunTun Mobile. All rights reserved.</Text>
+            <Text color={'#7F3A8A'} fontSize={'clamp(12px, 3vw, 14px)'} fontWeight={'bold'}>Copyright © 2024 TunTun Mobile. All rights reserved.</Text>
         </Flex>
     </Stack>
     </>
