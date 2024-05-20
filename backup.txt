@@ -1,0 +1,29 @@
+<HStack spacing={8}>
+                    <Flex gap={4} maxW={'100%'}>
+                        {/* รูปภาพ */}
+                        <Box maxW={'100%'} w={'120px'} h={'120px'} position={'relative'}>
+                            <Image src={'/imgs/QA-imgs/tap.png'} alt={'logo'} fill style={{objectFit: 'contain'}} />
+                        </Box>
+                        {/* คำอธิบาย */}
+                        <Flex flexDirection={'column'} gap={1} justifyContent={'start'} maxW={'100%'} w={'20rem'}>
+                            <Text fontSize={'3xl'} fontWeight={'bold'}>ราคาที่ดีที่สุดสำหรับคุณ</Text>
+                            <Text fontSize={'14px'} color={'#8F8F8F'}>
+                                เรายุติธรรมกับราคาที่มอบให้แก่ลูกค้า เรารับประกันว่าคุณจะขายโทรศัพท์และ
+                                อุปกรณ์ต่างๆได้มูลค่าสูงที่สุด โดยมีระบบประเมิณราคาภายใน 1 นาท
+                            </Text>
+                        </Flex>
+                    </Flex>
+                    <Flex gap={4} maxW={'100%'}>
+                        {/* รูปภาพ */}
+                        <Box maxW={'100%'} w={'120px'} h={'120px'} position={'relative'}>
+                            <Image src={'/imgs/QA-imgs/give-money.png'} alt={'logo'} fill style={{objectFit: 'contain'}} />
+                        </Box>
+                        {/* คำอธิบาย */}
+                        <Flex flexDirection={'column'} gap={1} justifyContent={'start'} maxW={'100%'} w={'20rem'}>
+                            <Text fontSize={'3xl'} fontWeight={'bold'}>ชำระเงินด่วน</Text>
+                            <Text fontSize={'14px'} color={'#8F8F8F'}>
+                            เรามีบริการมีมาตราฐาน ซื่อตรงต่อลูกค้า รวดเร็วทันใจรับเงินสดทันทีเมื่อลูกค้าตกลงขายโทรศัพท์และอุปกรณ์กับTunTun
+                            </Text>
+                        </Flex>
+                    </Flex>
+                </HStack>

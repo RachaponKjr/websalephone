@@ -1,11 +1,9 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import { Box } from "@chakra-ui/react";
+import RootHomePage from "./_components/RootHomePage";
 
 export default function Home() {
   return (
     <>
-    <Box h={'40rem'}>children</Box>
+      <RootHomePage />
     </>
   );
 }
