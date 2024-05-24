@@ -21,7 +21,7 @@ const StepComponent = () => {
 
               </Box>
               <Text textAlign={'center'} fontSize={12}>
-                ระบุโทรศัพท์
+                ระบุโทรศัพท์<br />
                 ของคุณ
               </Text>
             </Flex>
@@ -38,8 +38,8 @@ const StepComponent = () => {
               <Box w={'100%'} aspectRatio={'1/1'} position={'relative'} bgImage={'./imgs/step-imgs/note.png'} bgRepeat={'no-repeat'} bgSize={'contain'} bgPosition={'center'}>
               </Box>
               <Text textAlign={'center'} fontSize={12}>
-                ระบุโทรศัพท์
-                ของคุณ
+                ระบุสภาพ<br />
+                การใช้งาน
               </Text>
             </Flex>
             <Box position={'absolute'} top={8} right={-5}>
@@ -55,8 +55,8 @@ const StepComponent = () => {
               <Box w={'100%'} aspectRatio={'1/1'} position={'relative'} bgImage={'./imgs/step-imgs/calendar.png'} bgRepeat={'no-repeat'} bgSize={'contain'} bgPosition={'center'}>
               </Box>
               <Text textAlign={'center'} fontSize={12}>
-                ระบุโทรศัพท์
-                ของคุณ
+                นัดหมาย<br />
+                ขายสินค้า
               </Text>
             </Flex>
             <Box position={'absolute'} top={8} right={-5}>
@@ -72,8 +72,8 @@ const StepComponent = () => {
               <Box w={'100%'} aspectRatio={'1/1'} position={'relative'} bgImage={'./imgs/step-imgs/handshake.png'} bgRepeat={'no-repeat'} bgSize={'contain'} bgPosition={'center'}>
               </Box>
               <Text textAlign={'center'} fontSize={12}>
-                ระบุโทรศัพท์
-                ของคุณ
+                เจอกัน<br/>
+                ที่นัดพบ
               </Text>
             </Flex>
           </GridItem>
