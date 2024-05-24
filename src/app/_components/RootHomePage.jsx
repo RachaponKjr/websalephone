@@ -6,7 +6,7 @@ import QAComponents from './QAComponents'
 const RootHomePage = () => {
   return (
     <>
-    {/* <StepComponent/> */}
+    <StepComponent/>
     {/* <EstimateComponent/> */}
     <QAComponents/>
     </>
