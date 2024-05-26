@@ -60,7 +60,7 @@ const QAComponents = () => {
                     <GridItem >
                         <Flex>
                             {/* รูปภาพ */}
-                            <Box minW={'6rem'} inset={-3} aspectRatio={'1/1'} position={'relative'}>
+                            <Box minW={'6rem'} inset={-2} aspectRatio={'1/1'} position={'relative'}>
                                 <Image src={'/imgs/QA-imgs/give-money.png'} alt={'logo'} fill style={{ objectFit: 'contain' }} />
                             </Box>
                             <Box flexGrow={1}>
