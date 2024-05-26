@@ -7,7 +7,7 @@ const RootHomePage = () => {
   return (
     <>
     <StepComponent/>
-    {/* <EstimateComponent/> */}
+    <EstimateComponent/>
     <QAComponents/>
     </>
   )
