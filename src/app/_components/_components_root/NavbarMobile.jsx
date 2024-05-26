@@ -2,13 +2,29 @@
 import HambergerIcon from '@/icons/mobile_icons/HambergerIcon'
 import ManuActiveIcon from '@/icons/mobile_icons/ManuActiveIcon'
 import { Box, Flex, Input, Text, VStack } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const NavbarMobile = () => {
     const [open, setOpen] = React.useState(false)
+    const ref = React.useRef(null)
+
+    const handleClickOutside = (event) => {
+        if (ref.current && !ref.current.contains(event.target)) {
+            setOpen(false)
+            // console.log('click outside')
+        }
+        // console.log('click inside')
+    }
+
+    useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside)
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside)
+        }
+    },[])
     return (
         <>
-            <VStack display={{base: 'block', md: 'none'}} w={'full'} h={`${open ? '20rem' : '9rem'}`} top={0} zIndex={2} position={'fixed'} spacing={0} bg={'#7F3A8A'} px={6} pt={8} pb={4} rounded={"0 0 20px 20px"} boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px'} transitionDuration={'0.3s'} overflow={'hidden'}>
+            <VStack ref={ref} display={{base: 'block', md: 'none'}} w={'full'} h={`${open ? '20rem' : '9rem'}`} top={0} zIndex={2} position={'fixed'} spacing={0} bg={'#7F3A8A'} px={6} pt={8} pb={4} rounded={"0 0 20px 20px"} boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px'} transitionDuration={'0.3s'} overflow={'hidden'}>
                 <Flex mb={4} justifyContent={'space-between'} w={'full'} >
                     <Box w={"20%"}></Box>
                     {/* ชื่อ เว็บ */}

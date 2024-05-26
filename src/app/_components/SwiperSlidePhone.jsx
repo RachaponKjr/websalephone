@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules';
 
 // css import
-import '../_styles/swiper.css'
+// import '../_styles/swiper.css'
 // Import Swiper styles
 import 'swiper/css';
 import { Box, Flex, Text } from '@chakra-ui/react';
