@@ -13,7 +13,7 @@ const QAComponents = () => {
                     <GridItem >
                         <Flex>
                             {/* รูปภาพ */}
-                            <Box minW={'7rem'} aspectRatio={'1/1'} position={'relative'}>
+                            <Box minW={'6rem'} aspectRatio={'1/1'} position={'relative'}>
                                 <Image src={'/imgs/QA-imgs/approved.png'} alt={'logo'} fill style={{ objectFit: 'contain' }} />
                             </Box>
                             <Box flexGrow={1}>
@@ -27,7 +27,7 @@ const QAComponents = () => {
                     <GridItem >
                         <Flex>
                             {/* รูปภาพ */}
-                            <Box minW={'7rem'} aspectRatio={'1/1'} position={'relative'}>
+                            <Box minW={'6rem'} aspectRatio={'1/1'} position={'relative'}>
                                 <Image src={'/imgs/QA-imgs/protection.png'} alt={'logo'} fill style={{ objectFit: 'contain' }} />
                             </Box>
                             <Box flexGrow={1}>
@@ -45,7 +45,7 @@ const QAComponents = () => {
                     <GridItem >
                         <Flex>
                             {/* รูปภาพ */}
-                            <Box minW={'7rem'} aspectRatio={'1/1'} position={'relative'}>
+                            <Box minW={'6rem'} aspectRatio={'1/1'} position={'relative'}>
                                 <Image src={'/imgs/QA-imgs/tap.png'} alt={'logo'} fill style={{ objectFit: 'contain' }} />
                             </Box>
                             <Box flexGrow={1}>
@@ -60,7 +60,7 @@ const QAComponents = () => {
                     <GridItem >
                         <Flex>
                             {/* รูปภาพ */}
-                            <Box minW={'7rem'} inset={-3} aspectRatio={'1/1'} position={'relative'}>
+                            <Box minW={'6rem'} inset={-3} aspectRatio={'1/1'} position={'relative'}>
                                 <Image src={'/imgs/QA-imgs/give-money.png'} alt={'logo'} fill style={{ objectFit: 'contain' }} />
                             </Box>
                             <Box flexGrow={1}>
