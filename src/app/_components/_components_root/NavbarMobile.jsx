@@ -1,10 +1,14 @@
+'use client'
+import HambergerIcon from '@/icons/mobile_icons/HambergerIcon'
+import ManuActiveIcon from '@/icons/mobile_icons/ManuActiveIcon'
 import { Box, Flex, Input, Text, VStack } from '@chakra-ui/react'
 import React from 'react'
 
 const NavbarMobile = () => {
+    const [open, setOpen] = React.useState(false)
     return (
         <>
-            <VStack display={{base: 'block', md: 'none'}} w={'full'} h={'max-content'} spacing={0} bg={'#7F3A8A'} px={6} pt={8} pb={7} rounded={"0 0 20px 20px"} boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px'}>
+            <VStack display={{base: 'block', md: 'none'}} w={'full'} h={`${open ? '20rem' : '9rem'}`} top={0} zIndex={2} position={'fixed'} spacing={0} bg={'#7F3A8A'} px={6} pt={8} pb={4} rounded={"0 0 20px 20px"} boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px'} transitionDuration={'0.3s'} overflow={'hidden'}>
                 <Flex mb={4} justifyContent={'space-between'} w={'full'} >
                     <Box w={"20%"}></Box>
                     {/* ชื่อ เว็บ */}
@@ -27,22 +31,34 @@ const NavbarMobile = () => {
                                 <path d="M16.5 8.67504C16.5 12.6374 13.1417 15.8501 9 15.8501C8.51302 15.8507 8.02743 15.8057 7.54906 15.7158C7.20474 15.6512 7.03259 15.6188 6.9124 15.6372C6.79221 15.6556 6.62188 15.7461 6.28124 15.9273C5.3176 16.4398 4.19396 16.6207 3.11333 16.4197C3.52406 15.9145 3.80456 15.3084 3.92833 14.6586C4.00333 14.2611 3.8175 13.875 3.53917 13.5923C2.275 12.3086 1.5 10.5788 1.5 8.67504C1.5 4.71268 4.85833 1.5 9 1.5C13.1417 1.5 16.5 4.71268 16.5 8.67504Z" stroke="white" strokeWidth="1.5" strokeLinejoin="round" />
                                 <path d="M8.99664 9H9.00336M11.9933 9H12M6 9H6.00673" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
-
                         </Box>
                     </Flex>
                 </Flex>
                 <Flex h={'2.5rem'} alignItems={'center'} w={'full'} gap={5}>
-                    <Box ml={2}>
-                        <svg width="20" height="20" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 1L17 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                            <path d="M1 8L17 8" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                            <path d="M1 15L17 15" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
+                    <Box ml={2} w={6} onClick={() => setOpen(!open)}>
+                        {/* {open ? <ManuActiveIcon/> : <HambergerIcon/>} */}
+                        <HambergerIcon/>
                     </Box>
                     <Box display={'flex'} flexGrow={1} h={'full'}>
                         <Input placeholder='ค้นหาสินค้า' h={'full'} rounded={'xl'} bg={'white'} />
                     </Box>
                 </Flex>
+                {/* เมนูต่างๆ */}
+                <VStack>
+                    <Flex  mt={4} flexDirection={'column'} color={'white'} w={'full'}>
+                    <Box display={'flex'} justifyContent={'center'} alignItems={'center'} w={'full'} h={10} >
+                        <Text>ขายโทรศัพท์</Text>
+                    </Box>
+                    <Box borderTop={'2px solid white'} borderBottom={'2px solid white'} display={'flex'} justifyContent={'center'} alignItems={'center'} w={'full'} h={10} >
+                        <Text>ช่อมโทรศัพท์</Text>
+                    </Box>
+                    <Box display={'flex'} justifyContent={'center'} alignItems={'center'} w={'full'} h={10} >
+                        <Text>เกี่ยวกับเรา</Text>
+                    </Box>
+                    </Flex>
+                    {/* เบอร์โทร */}
+                    <Text mt={6} color={'white'} fontWeight={'bold'} fontSize={18}>091-234-5678</Text>
+                </VStack>
             </VStack>
         </>
     )
