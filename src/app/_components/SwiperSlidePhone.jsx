@@ -31,13 +31,13 @@ const SwiperSlidePhone = () => {
     <>
       <Box w={'full'} h={'full'} position={'relative'}>
         {/* ปุ่มเลื่อนซ้าย */}
-        <Box ref={prevRef} zIndex={2} cursor={'pointer'} display={{base:'none',md:'flex'}} justifyContent={'center'} alignItems={'center'} w={{lg:12,xl:14}} h={{lg:12,xl:14}} bg={'#7F3A89'} position={'absolute'} rounded={'full'} border={'2px solid white'} top={'50%'} transform={'translateY(-50%)'} left={'-8'}>
+        <Box ref={prevRef} zIndex={2} cursor={'pointer'} display={{base:'none',lg:'flex'}} justifyContent={'center'} alignItems={'center'} w={{lg:12,xl:14}} h={{lg:12,xl:14}} bg={'#7F3A89'} position={'absolute'} rounded={'full'} border={'2px solid white'} top={'50%'} transform={'translateY(-50%)'} left={'-8'}>
           <svg width="16" height="16" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 6.99805L12 0.0698433L12 13.9262L0 6.99805Z" fill="white" />
           </svg>
         </Box>
         {/* ปุ่มเลื่อนขวา */}
-        <Box ref={nextRef} zIndex={2} cursor={'pointer'} display={{base:'none',md:'flex'}} justifyContent={'center'} alignItems={'center'}  w={{lg:12,xl:14}} h={{lg:12,xl:14}} bg={'#7F3A89'} position={'absolute'} rounded={'full'} border={'2px solid white'} top={'50%'} transform={'translateY(-50%)'} right={'-8'}>
+        <Box ref={nextRef} zIndex={2} cursor={'pointer'} display={{base:'none',lg:'flex'}} justifyContent={'center'} alignItems={'center'}  w={{lg:12,xl:14}} h={{lg:12,xl:14}} bg={'#7F3A89'} position={'absolute'} rounded={'full'} border={'2px solid white'} top={'50%'} transform={'translateY(-50%)'} right={'-8'}>
           <svg width="16" height="16" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 7L0 13.9282L0 0.0717969L12 7Z" fill="white" />
           </svg>
@@ -57,7 +57,7 @@ const SwiperSlidePhone = () => {
               spaceBetween: 5,
             },
             768: {
-              spaceBetween: 0,
+              spaceBetween: 5,
             }
           }}
           style={{ width: '100%', height: '100%',zIndex:0 }}
@@ -67,15 +67,15 @@ const SwiperSlidePhone = () => {
             <>
               <SwiperSlide>
                 <Flex flexDirection={'column'} justifyContent={'start'} alignItems={'center'} w={'full'} h={'full'}>
-                  <Box w={'full'} h={'90%'} position={'relative'} boxShadow={'sm'}>
+                  <Box w={'full'} h={'80%'} position={'relative'} boxShadow={'sm'}>
                     {/* ป้ายประหยัด */}
                     <Box position={'absolute'} px={2} py={1} w={'max-content'} bg={'#004331'} top={4}>
                       <Text color={'white'} fontSize={{base:6,md:12}} fontWeight={'bold'}>ประหยัด ฿ 14,210</Text>
                     </Box>
                   </Box>
                   {/* ปุ่มเพิ่มสินค้า */}
-                  <Box w={{base:'100%',md:'max-content'}} h={'max-content'} bg={'#7E3A89'} px={{lg:4,xl:6}} py={{base:1,md:2}} rounded={{base:'none',md:'md'}} position={'relative'} top={{base:0,md:-2}}>
-                    <Text color={'white'} textAlign={'center'} fontSize={{base:10,lg:14,xl:18}} fontWeight={'bold'}>หยิบลงตะกร้า</Text>
+                  <Box w={{base:'100%',lg:'max-content'}} h={'max-content'} bg={'#7E3A89'} px={{lg:4,xl:6}} mt={{base:0,md:2,lg:0}} py={{base:1,md:2}} rounded={{base:'none',md:'md'}} position={'relative'} top={{base:0,lg:-2}}>
+                    <Text color={'white'} textAlign={'center'} fontSize={{base:10,md:14,lg:14,xl:18}} fontWeight={'bold'}>หยิบลงตะกร้า</Text>
                   </Box>
                 </Flex>
               </SwiperSlide>
