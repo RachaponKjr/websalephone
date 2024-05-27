@@ -23,9 +23,13 @@ const RootHomePage = () => {
   // console.log(step)
   return (
     <>
-      <StepComponent />
+      <StepComponent step={step} />
       {
-        step === 0 ? <EstimateComponent nextStep={nextStep} /> :
+        step === 0 ? (
+          <>
+            <EstimateComponent nextStep={nextStep} />
+            <QAComponents />
+          </>) :
           (
             <>
               {
@@ -34,7 +38,7 @@ const RootHomePage = () => {
                 ) : (
                   <>
                     {step === 1 && <StepPageTwo nextStep={nextStep} />}
-                    {step === 2 && <StepPageThree/>}
+                    {step === 2 && <StepPageThree />}
                   </>
                 )
               }
