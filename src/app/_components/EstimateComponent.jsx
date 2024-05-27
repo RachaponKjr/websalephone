@@ -3,8 +3,12 @@ import { Box, Button, Container, Flex, HStack, Select, Stack, Text, VStack } fro
 import React from 'react'
 import SwiperSlidePhone from './SwiperSlidePhone'
 
-const EstimateComponent = () => {
+const EstimateComponent = ({ nextStep }) => {
+
+    // debug
+    console.log(nextStep)
     return (
+        <>
         <Box w={'full'} h={'max-content'} bg={{ base: "none", lg: '#7F3A8A' }} spacing={0}>
             <Container maxW='container.xl' h='full' px={{ base: 0, lg: "auto" }}>
                 <Flex flexDirection={{ base: 'column-reverse', lg: 'row' }}  h={'full'} gap={{ lg: 4, xl: 6 }} pt={{base:0,md:6}} alignItems={{base:'start',md:'center'}}>
@@ -43,8 +47,8 @@ const EstimateComponent = () => {
                                         <option>โทรศัพท์ที่ต้องการขาย</option>
                                     </Select>
                                 </Box>
-                                <Box w={{ base: '288px',lg: '288px', xl: '308px' }} h={'3rem'} mt={{base:0,md:6}} mb={4} px={'2rem'}>
-                                    <Button w={'full'} h={'full'} bg={'#7F3A8A'} color={'white'}>เริ่มเลย</Button>
+                                <Box w={{ base: '288px',lg: '288px', xl: '308px' }} h={'3rem'} mt={{base:0,md:6}} mb={4} px={'2rem'} onClick={() => nextStep(1)}>
+                                    <Button w={'full'} h={'full'} bg={'#7F3A8A'} color={'white'} >เริ่มเลย</Button>
                                 </Box>
                             </VStack>
                         </Flex>
@@ -52,6 +56,7 @@ const EstimateComponent = () => {
                 </Flex>
             </Container>
         </Box>
+        </>
     )
 }
 
