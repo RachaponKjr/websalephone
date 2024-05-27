@@ -15,7 +15,7 @@ const StepPageThree = () => {
                                     <Radio value='1' bg={'#DADADA'} border={'1px solid'} borderColor={'#AFAFAF'} _checked={{ bg: '#A186BD', borderColor: '#7F3A8A' }}></Radio>
                                 </Box>
                                 <Flex flexDirection={'row'}>
-                                    <Flex justifyContent={'center'} flexDirection={'column'} w={'70%'} fontSize={'11px'} h={'4rem'} >
+                                    <Flex justifyContent={'center'} flexDirection={'column'} w={'70%'} fontSize={'12px'} h={'4rem'} >
                                         <Text fontWeight={'bold'}>รายการรับซื้อ</Text>
                                         <Text>iPhone 11 128 GB</Text>
                                     </Flex>
@@ -23,7 +23,7 @@ const StepPageThree = () => {
                                     <Box flexGrow={1}></Box>
                                 </Flex>
                                 <Box w={'full'}>
-                                    <Text as={'p'} fontSize={'8px'}>
+                                    <Text as={'p'} fontSize={'9px'}>
                                         ไม่มีรอยขีดข่วน/ หน้าจอไม่มีรอย/ แสดงภาพหน้าจอปกติ/ เครื่องไทย TH / หมดประกัน/ อุปกรณ์ครบ/ แบตเตอรี่ ต่ำกว่า 80%/ ระบบสัมผัส/
                                     </Text>
                                 </Box>
@@ -37,7 +37,7 @@ const StepPageThree = () => {
                                     <Radio value='2' bg={'#DADADA'} border={'1px solid'} borderColor={'#AFAFAF'} _checked={{ bg: '#A186BD', borderColor: '#7F3A8A' }}></Radio>
                                 </Box>
                                 <Flex flexDirection={'row'}>
-                                    <Flex justifyContent={'center'} flexDirection={'column'} w={'70%'} fontSize={'11px'} h={'4rem'} >
+                                    <Flex justifyContent={'center'} flexDirection={'column'} w={'70%'} fontSize={'12px'} h={'4rem'} >
                                         <Text fontWeight={'bold'}>รายการรับซื้อ</Text>
                                         <Text>iPhone 11 128 GB</Text>
                                     </Flex>
@@ -45,7 +45,7 @@ const StepPageThree = () => {
                                     <Box flexGrow={1}></Box>
                                 </Flex>
                                 <Box w={'full'}>
-                                    <Text as={'p'} fontSize={'8px'}>
+                                    <Text as={'p'} fontSize={'9px'}>
                                         ไม่มีรอยขีดข่วน/ หน้าจอไม่มีรอย/ แสดงภาพหน้าจอปกติ/ เครื่องไทย TH / หมดประกัน/ อุปกรณ์ครบ/ แบตเตอรี่ ต่ำกว่า 80%/ ระบบสัมผัส/
                                     </Text>
                                 </Box>
@@ -87,14 +87,14 @@ const StepPageThree = () => {
                             <Box mr={4} minW="4rem" h={'1.5rem'} display={'flex'} alignItems={'center'} justifyContent={'end'}>
                                 <Text as={'h6'} fontSize={'12px'} fontWeight={'bold'}>ข้อมูล</Text>
                             </Box>
-                            <Input h={'1.5rem'} fontSize={10} placeholder='ชื่อ - นามสกุล'/>
+                            <Input h={'2rem'} fontSize={12} placeholder='ชื่อ - นามสกุล'/>
                         </HStack>
                         {/* ช้อมูลที่อยู่ */}
                         <HStack spacing={0}>
                             <Box mr={4} minW="4rem" h={'1.5rem'} display={'flex'} alignItems={'center'} justifyContent={'end'}>
                                 <Text as={'h6'} fontSize={'12px'} fontWeight={'bold'}>ที่อยู่</Text>
                             </Box>
-                            <Input h={'1.5rem'} fontSize={10} placeholder='หากต้องการขายด่วน กรุณาติดต่อ 092-123-4567'/>
+                            <Input h={'2rem'} fontSize={12} placeholder='หากต้องการขายด่วน กรุณาติดต่อ 092-123-4567'/>
                         </HStack>
                         {/* ช้อมูลจังหวัด */}
                         <HStack spacing={0}>
@@ -102,8 +102,8 @@ const StepPageThree = () => {
                                 <Text as={'h6'} fontSize={'12px'} fontWeight={'bold'}>จังหวัด</Text>
                             </Box>
                             <Flex gap={2}>
-                            <Input h={'1.5rem'} fontSize={10} placeholder='กรุงเทพมหานคร'/>
-                            <Input h={'1.5rem'} fontSize={10} placeholder='เขตพระนคร'/>
+                            <Input h={'2rem'} fontSize={12} placeholder='กรุงเทพมหานคร'/>
+                            <Input h={'2rem'} fontSize={12} placeholder='เขตพระนคร'/>
                             </Flex>
                         </HStack>
                         {/* ช้อมูลวัน/เวลา */}
@@ -112,8 +112,8 @@ const StepPageThree = () => {
                                 <Text as={'h6'} fontSize={'12px'} fontWeight={'bold'}>วัน/เวลา</Text>
                             </Box>
                             <Flex gap={2}>
-                            <Input h={'1.5rem'} fontSize={10} placeholder='วันที่'/>
-                            <Input h={'1.5rem'} fontSize={10} placeholder='เวลา'/>
+                            <Input h={'2rem'} fontSize={12} placeholder='วันที่'/>
+                            <Input h={'2rem'} fontSize={12} placeholder='เวลา'/>
                             </Flex>
                         </HStack>
                         {/* ช้อมูลโทรศัพท์ */}
@@ -121,19 +121,19 @@ const StepPageThree = () => {
                             <Box mr={4} minW="4rem" h={'1.5rem'} display={'flex'} alignItems={'center'} justifyContent={'end'}>
                                 <Text as={'h6'} fontSize={'12px'} fontWeight={'bold'}>โทรศัพท์</Text>
                             </Box>
-                            <Input h={'1.5rem'} fontSize={10} placeholder='เบอร์โทรศัพท์'/>
+                            <Input h={'2rem'} fontSize={12} placeholder='เบอร์โทรศัพท์'/>
                         </HStack>
                         {/* ยืนยันช้อมูลโทรศัพท์ */}
                         <HStack spacing={0}>
                             <Box mr={4} minW="4rem" h={'1.5rem'} display={'flex'} alignItems={'center'} justifyContent={'end'}>
                                 <Text as={'h6'} fontSize={'12px'} fontWeight={'bold'}></Text>
                             </Box>
-                            <Input h={'1.5rem'} fontSize={10} placeholder='ยืนยันเบอร์โทรศัพท์'/>
+                            <Input h={'2rem'} fontSize={12} placeholder='ยืนยันเบอร์โทรศัพท์'/>
                         </HStack>
 
-                        <Flex gap={2} alignItems={'start'} mt={2} pl={10}>
+                        <Flex gap={2} alignItems={'start'} mt={2} pl={4}>
                             <Radio size={'sm'} bg={'#DADADA'} border={'1px solid'} borderColor={'#AFAFAF'} _checked={{ bg: '#A186BD', borderColor: '#7F3A8A' }}></Radio>
-                            <Flex flexDirection={'column'} fontSize={10}>
+                            <Flex flexDirection={'column'} fontSize={12}>
                                 <Text as={'h6'}>เพื่อใช้งานต่อ ฉันได้อ่านและยอมรับ </Text>
                                 <Text as={'h6'}><Text as={'span'} fontWeight={'bold'} color={'#7F3A8A'}>ข้อกำหนดการใช้งาน</Text> และ <Text as={'span'} fontWeight={'bold'} color={'#7F3A8A'}>คำชี้แจงความเป็นส่วนตัว</Text></Text>
                             </Flex>
