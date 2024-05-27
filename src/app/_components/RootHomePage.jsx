@@ -5,6 +5,7 @@ import EstimateComponent from './EstimateComponent'
 import QAComponents from './QAComponents'
 import StepPageTwo from './StepPageTwo'
 import LoadingComponent from './_components_root/LoadingComponent'
+import StepPageThree from './StepPageThree'
 
 const RootHomePage = () => {
   const [step, setStep] = React.useState(0)
@@ -33,6 +34,7 @@ const RootHomePage = () => {
                 ) : (
                   <>
                     {step === 1 && <StepPageTwo nextStep={nextStep} />}
+                    {step === 2 && <StepPageThree/>}
                   </>
                 )
               }

@@ -1,7 +1,7 @@
 import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Button, Flex, Text } from '@chakra-ui/react'
 import React from 'react'
 
-const StepPageTwo = () => {
+const StepPageTwo = ({nextStep}) => {
     return (
         <>
             <Box w={'full'} h={'full'} p={2} mb={24}>
@@ -194,7 +194,7 @@ const StepPageTwo = () => {
                     </Flex>
                     {/* ปุ่มประเมิณราคา */}
                     <Flex justify={'center'} my={'2rem'}>
-                        <Button bg={'#7F3A89'} color={'white'} w={'15rem'} rounded={'lg'}>ประเมิณราคา</Button>
+                        <Button bg={'#7F3A89'} color={'white'} w={'15rem'} rounded={'lg'} onClick={() => nextStep(2)}>ประเมิณราคา</Button>
                     </Flex>
                 </Flex>
             </Box>
