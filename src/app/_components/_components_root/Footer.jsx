@@ -10,11 +10,11 @@ const Footer = () => {
             <Container maxW='container.xl' h='full'>
                 <VStack px={{base: 0, lg: 6}} pt={6} spacing={6} pb={14}>
                     <Text fontSize={'clamp(28px, 3vw, 32px)'} fontWeight={'bold'} color={'white'}>TunTun Mobile ดียังไง?</Text>
-                    <Grid templateColumns={{base: 'repeat(2,minmax(0,1fr))', md:'repeat(4,minmax(0,1fr))'}} gap={4} w={'full'}>
+                    <Grid templateColumns={{base: 'repeat(2,minmax(0,1fr))', md:'repeat(4,minmax(0,1fr))'}} columnGap={{base:0,md:6}} rowGap={{base:6,md:6}} w={'full'}>
                         <GridItem justifySelf={'center'}>
                             <Flex flexDirection={'column'} gap={4} alignItems={'center'}>
                                 {/* รูปภาพ */}
-                                <Box position={'relative'} w={'6rem'} aspectRatio={'1/1'}>
+                                <Box position={'relative'} w={{base:'4rem',lg:'6rem'}} aspectRatio={'1/1'}>
                                     <Image src={'/imgs/footer-imgs/accept.png'} alt={'logo'} fill style={{objectFit: 'contain'}} />
                                 </Box>
                                 {/* คำอธิบาย */}
@@ -30,7 +30,7 @@ const Footer = () => {
                         <GridItem justifySelf={'center'}>
                             <Flex flexDirection={'column'} gap={4} alignItems={'center'}>
                                 {/* รูปภาพ */}
-                                <Box position={'relative'} w={'6rem'} aspectRatio={'1/1'}>
+                                <Box position={'relative'} w={{base:'4rem',lg:'6rem'}} aspectRatio={'1/1'}>
                                     <Image src={'/imgs/footer-imgs/money.png'} alt={'logo'} fill style={{objectFit: 'contain'}} />
                                 </Box>
                                 {/* คำอธิบาย */}
@@ -46,7 +46,7 @@ const Footer = () => {
                         <GridItem justifySelf={'center'}>
                             <Flex flexDirection={'column'} gap={4} alignItems={'center'}>
                                 {/* รูปภาพ */}
-                                <Box position={'relative'} maxW={'100%'} w={'6rem'} aspectRatio={'1/1'}>
+                                <Box position={'relative'} w={{base:'4rem',lg:'6rem'}} aspectRatio={'1/1'}>
                                     <Image src={'/imgs/footer-imgs/linechart.png'} alt={'logo'} fill style={{objectFit: 'contain'}} />
                                 </Box>
                                 {/* คำอธิบาย */}
@@ -62,7 +62,7 @@ const Footer = () => {
                         <GridItem justifySelf={'center'}>
                             <Flex flexDirection={'column'} gap={4} alignItems={'center'}>
                                 {/* รูปภาพ */}
-                                <Box position={'relative'} w={'6rem'} aspectRatio={'1/1'}>
+                                <Box position={'relative'} w={{base:'4rem',lg:'6rem'}} aspectRatio={'1/1'}>
                                     <Image src={'/imgs/footer-imgs/customer.png'} alt={'logo'} fill style={{objectFit: 'contain'}} />
                                 </Box>
                                 {/* คำอธิบาย */}
