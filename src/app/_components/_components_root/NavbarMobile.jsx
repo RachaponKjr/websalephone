@@ -1,30 +1,15 @@
 'use client'
 import HambergerIcon from '@/icons/mobile_icons/HambergerIcon'
 import ManuActiveIcon from '@/icons/mobile_icons/ManuActiveIcon'
-import { Box, Flex, Input, Text, VStack } from '@chakra-ui/react'
+import { Box, Drawer, DrawerBody, DrawerContent, DrawerHeader, DrawerOverlay, Flex, Input, Text, VStack, useDisclosure } from '@chakra-ui/react'
 import React, { useEffect } from 'react'
+import DrawerLayOut from './DrawerLayout'
 
 const NavbarMobile = () => {
-    const [open, setOpen] = React.useState(false)
-    const ref = React.useRef(null)
-
-    const handleClickOutside = (event) => {
-        if (ref.current && !ref.current.contains(event.target)) {
-            setOpen(false)
-            // console.log('click outside')
-        }
-        // console.log('click inside')
-    }
-
-    useEffect(() => {
-        document.addEventListener('mousedown', handleClickOutside)
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside)
-        }
-    },[])
+    const { isOpen, onOpen, onClose } = useDisclosure()
     return (
         <>
-            <VStack ref={ref} display={{base: 'block', md: 'none'}} w={'full'} h={`${open ? '20rem' : '9rem'}`} top={0} zIndex={2} position={'fixed'} spacing={0} bg={'#7F3A8A'} px={6} pt={8} pb={4} rounded={"0 0 20px 20px"} boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px'} transitionDuration={'0.3s'} overflow={'hidden'}>
+            <VStack display={{ base: 'block', md: 'none' }} w={'full'} h={'9rem'} top={0} zIndex={2} position={'fixed'} spacing={0} bg={'#7F3A8A'} px={6} pt={8} pb={4} rounded={"0 0 20px 20px"} boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px'} transitionDuration={'0.3s'} overflow={'hidden'}>
                 <Flex mb={4} justifyContent={'space-between'} w={'full'} >
                     <Box w={"20%"}></Box>
                     {/* ชื่อ เว็บ */}
@@ -51,31 +36,17 @@ const NavbarMobile = () => {
                     </Flex>
                 </Flex>
                 <Flex h={'2.5rem'} alignItems={'center'} w={'full'} gap={5}>
-                    <Box ml={2} w={6} onClick={() => setOpen(!open)}>
+                    <Box ml={2} w={6} onClick={onOpen}>
                         {/* {open ? <ManuActiveIcon/> : <HambergerIcon/>} */}
-                        <HambergerIcon/>
+                        <HambergerIcon />
                     </Box>
                     <Box display={'flex'} flexGrow={1} h={'full'}>
                         <Input placeholder='ค้นหาสินค้า' h={'full'} rounded={'xl'} bg={'white'} />
                     </Box>
                 </Flex>
-                {/* เมนูต่างๆ */}
-                <VStack>
-                    <Flex  mt={4} flexDirection={'column'} color={'white'} w={'full'}>
-                    <Box display={'flex'} justifyContent={'center'} alignItems={'center'} w={'full'} h={10} >
-                        <Text>ขายโทรศัพท์</Text>
-                    </Box>
-                    <Box borderTop={'2px solid white'} borderBottom={'2px solid white'} display={'flex'} justifyContent={'center'} alignItems={'center'} w={'full'} h={10} >
-                        <Text>ช่อมโทรศัพท์</Text>
-                    </Box>
-                    <Box display={'flex'} justifyContent={'center'} alignItems={'center'} w={'full'} h={10} >
-                        <Text>เกี่ยวกับเรา</Text>
-                    </Box>
-                    </Flex>
-                    {/* เบอร์โทร */}
-                    <Text mt={6} color={'white'} fontWeight={'bold'} fontSize={18}>091-234-5678</Text>
-                </VStack>
             </VStack>
+            
+            <DrawerLayOut placement={'left'} isOpen={isOpen} onClose={onClose} />
         </>
     )
 }
