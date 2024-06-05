@@ -9,7 +9,7 @@ import StepPageThree from './StepPageThree'
 import FinishComponent from './FinishComponent'
 
 const RootHomePage = () => {
-  const [step, setStep] = React.useState(3)
+  const [step, setStep] = React.useState(0)
   const [loading, setLoading] = React.useState(false)
 
   const nextStep = (step) => {
