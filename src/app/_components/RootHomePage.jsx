@@ -6,9 +6,10 @@ import QAComponents from './QAComponents'
 import StepPageTwo from './StepPageTwo'
 import LoadingComponent from './_components_root/LoadingComponent'
 import StepPageThree from './StepPageThree'
+import FinishComponent from './FinishComponent'
 
 const RootHomePage = () => {
-  const [step, setStep] = React.useState(0)
+  const [step, setStep] = React.useState(3)
   const [loading, setLoading] = React.useState(false)
 
   const nextStep = (step) => {
@@ -38,7 +39,8 @@ const RootHomePage = () => {
                 ) : (
                   <>
                     {step === 1 && <StepPageTwo nextStep={nextStep} />}
-                    {step === 2 && <StepPageThree />}
+                    {step === 2 && <StepPageThree nextStep={nextStep}/>}
+                    {step === 3 && <FinishComponent/>}
                   </>
                 )
               }

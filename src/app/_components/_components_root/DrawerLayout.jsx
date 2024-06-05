@@ -39,7 +39,7 @@ const DrawerLayOut = ({ placement, onClose, isOpen }) => {
                                     <Text as={"h6"} >กลับไปยังหน้าแรก</Text>
                                 </Link>
                             </Flex>
-                            <Flex flexDirection={'column'} gap={2}>
+                            <Flex flexDirection={'column'} gap={4}>
                                 <Flex flexDirection={'row'} alignItems={'center'} gap={2}>
                                     <Box>
                                         <Image src={"/line.png"} alt='line' width={24} height={24} />

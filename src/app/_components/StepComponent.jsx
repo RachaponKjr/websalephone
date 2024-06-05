@@ -12,8 +12,8 @@ const StepComponent = () => {
           <GridItem position={'relative'}>
             <Flex flexDir={'column'} alignItems={'center'} gap={2}>
               {/* รูปภาพ */}
-              <Box w={{base:'3rem',md:'5rem',lg:'6rem'}} display={'flex'} justifyContent={'center'} aspectRatio={'1/1'} position={'relative'}>
-                <Box w={{base:'1.8rem',md:'3rem'}} >
+              <Box w={{base:'3rem',lg:'5rem'}} display={'flex'} justifyContent={'center'} aspectRatio={'1/1'} position={'relative'}>
+                <Box w={{base:'1.8rem',md:'2rem',lg:"3rem"}} >
                 <svg style={{ width: "100%", height: "100%" }} viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="0.451172" width="13.72" height="23.6552" rx="3" fill="#7F3A8A" />
                   <circle cx="7.54777" cy="21.7626" r="0.946207" fill="white" />
@@ -36,7 +36,7 @@ const StepComponent = () => {
           <GridItem position={'relative'}>
             <Flex flexDir={'column'} alignItems={'center'} gap={2}>
               {/* รูปภาพ */}
-              <Box w={{base:'3rem',md:'5rem',lg:'6rem'}} aspectRatio={'1/1'} position={'relative'} bgImage={'./imgs/step-imgs/note.png'} bgRepeat={'no-repeat'} bgSize={'contain'} bgPosition={'center'}>
+              <Box w={{base:'3rem',lg:'5rem'}} aspectRatio={'1/1'} position={'relative'} bgImage={'./imgs/step-imgs/note.png'} bgRepeat={'no-repeat'} bgSize={'contain'} bgPosition={'center'}>
               </Box>
               <Text textAlign={'center'} fontSize={{base:12,md:16}}>
                 ระบุสภาพ<br />
@@ -53,7 +53,7 @@ const StepComponent = () => {
           <GridItem position={'relative'}>
             <Flex flexDir={'column'} alignItems={'center'} gap={2}>
               {/* รูปภาพ */}
-              <Box w={{base:'3rem',md:'5rem',lg:'6rem'}} aspectRatio={'1/1'} position={'relative'} bgImage={'./imgs/step-imgs/calendar.png'} bgRepeat={'no-repeat'} bgSize={'contain'} bgPosition={'center'}>
+              <Box w={{base:'3rem',lg:'5rem'}} aspectRatio={'1/1'} position={'relative'} bgImage={'./imgs/step-imgs/calendar.png'} bgRepeat={'no-repeat'} bgSize={'contain'} bgPosition={'center'}>
               </Box>
               <Text textAlign={'center'} fontSize={{base:12,md:16}}>
                 นัดหมาย<br />
@@ -70,7 +70,7 @@ const StepComponent = () => {
           <GridItem position={'relative'}>
             <Flex flexDir={'column'} alignItems={'center'} gap={2}>
               {/* รูปภาพ */}
-              <Box w={{base:'3rem',md:'5rem',lg:'6rem'}} aspectRatio={'1/1'} position={'relative'} bgImage={'./imgs/step-imgs/handshake.png'} bgRepeat={'no-repeat'} bgSize={'contain'} bgPosition={'center'}>
+              <Box w={{base:'3rem',lg:'5rem'}} aspectRatio={'1/1'} position={'relative'} bgImage={'./imgs/step-imgs/handshake.png'} bgRepeat={'no-repeat'} bgSize={'contain'} bgPosition={'center'}>
               </Box>
               <Text textAlign={'center'} fontSize={{base:12,md:16}}>
                 เจอกัน<br/>

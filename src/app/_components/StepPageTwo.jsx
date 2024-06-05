@@ -4,11 +4,11 @@ import React from 'react'
 const StepPageTwo = ({nextStep}) => {
     return (
         <>
-            <Box w={'full'} h={'full'} p={2} mb={24}>
-                <Flex flexDirection={'column'} w={'full'} h={'full'} boxShadow={"rgba(0, 0, 0, 0.16) 0px 1px 4px"}>
+            <Box w={'full'} h={'full'} px={{base:2,md:"1rem",lg:"5rem"}} mb={24}>
+                <Flex gap={{base:0,md:4}} flexDirection={{base:'column',md:'row'}} mx={{base:0,md:"auto"}} w={{base:'full',lg:"60rem"}} h={'full'} boxShadow={{base:"rgba(0, 0, 0, 0.16) 0px 1px 4px",md:'none' }}>
                     <Box p={4}>
                         {/* ส่วนกล่อง การรักษาความปลอดภัย */}
-                        <Flex flexDirection={'column'} w={'full'} h={'full'} bg={'#E7D8F7'} border={'2px solid #7F3A8A'} rounded={'lg'} py={4} gap={4}>
+                        <Flex flexDirection={'column'} w={'full'} h={{base:'full',md:'max-content'}} bg={'#E7D8F7'} border={'2px solid #7F3A8A'} rounded={'lg'} py={4} gap={4}>
                             {/* Text หัวข้อของการรักษาความปลอดภัย */}
                             <Flex borderLeft={'3px solid #7F3A8A'} alignItems={'center'} p={2} gap={2}>
                                 <Box>
@@ -42,11 +42,12 @@ const StepPageTwo = ({nextStep}) => {
                             </Flex>
                         </Flex>
                     </Box>
+                    <Flex flexDirection={{base:"column" , md:"column"}} w={{base:'full',md:"770px"}} h={'full'} boxShadow={"rgba(0, 0, 0, 0.16) 0px 1px 4px" }>
                     {/* ส่วนกล่องสำหรับเลือก รูปแบบสินค้า */}
                     <Flex flexDirection={'column'} gap={4}>
                         {/* ส่วนหัวข้อของสำหรับเลือก รูปแบบสินค้า */}
-                        <Box borderLeft={'3px solid #7F3A8A'} h={'24px'} display={'flex'} alignItems={'center'}>
-                            <Text as={'h3'} ml={2} fontWeight={'bold'} fontSize={13}>ระบุข้อมูลการขาย iPhone iPhone 11 128 GB</Text>
+                        <Box borderLeft={'4px solid #7F3A8A'} h={'24px'} display={'flex'} alignItems={'center'}>
+                            <Text as={'h3'} ml={2} fontWeight={'bold'} fontSize={{base:12,md:14,lg:16}}>ระบุข้อมูลการขาย iPhone iPhone 11 128 GB</Text>
                         </Box>
                         {/* Accordion เปิด เลือก รายการ */}
                         <Accordion allowToggle display={'flex'} flexDirection={'column'} gap={3} border={'0px solid white'} px={2}>
@@ -195,6 +196,7 @@ const StepPageTwo = ({nextStep}) => {
                     {/* ปุ่มประเมิณราคา */}
                     <Flex justify={'center'} my={'2rem'}>
                         <Button bg={'#7F3A89'} color={'white'} w={'15rem'} rounded={'lg'} onClick={() => nextStep(2)}>ประเมิณราคา</Button>
+                    </Flex>
                     </Flex>
                 </Flex>
             </Box>
