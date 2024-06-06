@@ -5,12 +5,12 @@ import React from 'react'
 const AboutPage = () => {
     return (
         <>
-            <Container maxW={'containar-xl'} height={'max-content'} mb={'5rem'} mt={"10rem"} display={'flex'} flexDirection={'column'} justifyContent={'center'} gap={'16px'}>
-                <Text as={'h4'} textAlign={'center'} fontSize={'20px'} fontWeight={'bold'} color={'#324054'}>เกี่ยวกับเรา</Text>
-                <Box w={'full'} py={'24px'} h={'max-content'} display={'flex'} flexDirection={'column'} alignItems={'center'} boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px;'}>
-                    <Text as={'h4'} fontSize={'25px'} textShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px;'} color={'#7F3A8A'} fontWeight={'bold'}>ติดต่อเรา</Text>
+            <Container maxW={'containar-xl'} height={'max-content'} mb={'5rem'} mt={{base:"10rem",md:"3rem"}} display={'flex'} flexDirection={'column'} justifyContent={'center'} gap={'16px'}>
+                <Text as={'h4'} textAlign={'center'} fontSize={{base:'20px',md:'36px'}} fontWeight={'bold'} color={'#324054'}>เกี่ยวกับเรา</Text>
+                <Box w={{base:'full',md:'max-content'}} mx={'auto'} bg={'#FAFAFA'} px={{base:0,md:'48px'}} py={'24px'} h={'max-content'} display={'flex'} flexDirection={'column'} alignItems={'center'} boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px;'}>
+                    <Text as={'h4'} fontSize={{base:'25px',md:'40px'}} textShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px;'} color={'#7F3A8A'} fontWeight={'bold'}>ติดต่อเรา</Text>
                     {/* ข้อมูล  */}
-                    <Flex flexDirection={'column'} my={'24px'} gap={1} textAlign={'center'} color={'#324054'} fontWeight={'bold'} fontSize={'10px'}>
+                    <Flex flexDirection={'column'} my={'24px'} gap={1} textAlign={'center'} color={'#324054'} fontWeight={'bold'} fontSize={{base:'10px',md:'20px'}}>
                         <Text as={'h6'} textTransform={'uppercase'}>mbk center</Text>
                         <Text as={'h6'}>444 ถ. พญาไท แขวงวังใหม่ เขตปทุมวัน กรุงเทพมหานคร 10330</Text>
                         <Flex justifyContent={'center'} alignItems={'center'} gap={3}>
@@ -18,9 +18,8 @@ const AboutPage = () => {
                             <Flex alignItems={'center'} gap={'4px'}>
                                 <Box w={'13px'} h={'13px'} position={'relative'}>
                                     <Image src={'/about-img/clock.png'} alt={'clock'} fill style={{ objectFit: 'contain' }} />
-
                                 </Box>
-                                <Text as={'p'} fontSize={'9px'}>เปิดบริการ 10.00 น - 19.00 น.       </Text>
+                                <Text as={'p'} fontSize={{base:'9px',md:'16px'}}>เปิดบริการ 10.00 น - 19.00 น.       </Text>
                             </Flex>
                             {/* เบอร์ */}
                             <Flex alignItems={'center'} gap={'4px'}>
@@ -30,7 +29,7 @@ const AboutPage = () => {
                                         <path d="M7.58398 3.70075C8.35491 4.02812 8.97271 4.64591 9.30009 5.41683M7.93825 1.0835C9.85423 1.63641 11.3643 3.14645 11.9173 5.06238" stroke="#2A353D" stroke-width="1.5" stroke-linecap="round" />
                                     </svg>
                                 </Box>
-                                <Text as={'p'} fontSize={'9px'}>0923456789</Text>
+                                <Text as={'p'} fontSize={{base:'9px',md:'16px'}}>0923456789</Text>
                             </Flex>
                             {/* Line */}
                             <Flex alignItems={'center'} gap={'4px'}>
@@ -38,13 +37,13 @@ const AboutPage = () => {
                                     <Image src={'/about-img/line.png'} alt={'clock'} fill style={{ objectFit: 'contain' }} />
 
                                 </Box>
-                                <Text as={'p'} fontSize={'9px'}>test.exe</Text>
+                                <Text as={'p'} fontSize={{base:'9px',md:'16px'}}>test.exe</Text>
                             </Flex>
                         </Flex>
                     </Flex>
                     {/* รูปภาพ */}
-                    <Box w={'full'} aspectRatio={'1/1'} position={'relative'}>
-                        <Image src={'/map.png'} alt={'map'} fill style={{ objectFit: 'contain' }} />
+                    <Box w={{base:'80%',sm:'80%'}} mb={'24px'} aspectRatio={{base:'1/1'}} position={'relative'}>
+                        <Image src={'/map.png'} alt={'map'} fill style={{ objectFit: 'cover' }} />
                     </Box>
                 </Box>
             </Container>
