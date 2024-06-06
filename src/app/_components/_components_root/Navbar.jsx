@@ -15,7 +15,9 @@ const Navbar = () => {
                                 <Box as='h6' position={'absolute'} fontSize={'2xl'} fontWeight={'bold'} left={10} >TM</Box>
                             </Box>
                             <Text as='h1' fontSize={'clamp(18px, 1vw, 32px)'} fontWeight={'bold'} whiteSpace={'nowrap'}>
+                                <Link href={'/'} style={{ textDecoration: 'none'}}>
                                 TunTun Mobile
+                                </Link>
                             </Text>
                         </Flex>
                         <Flex gap={{base: 1, lg: 2}}>
@@ -26,12 +28,12 @@ const Navbar = () => {
                                 </Link>
                             </Box>
                             <Box display={'flex'} alignItems={'center'}  fontSize={'clamp(14px, 1vw, 18px)'} w={'max-content'} px={2} h={'2rem'}>
-                                <Link href={'/'} style={{ textDecoration: 'none'}}>
+                                <Link href={'/fixphone'} style={{ textDecoration: 'none'}}>
                                     ซ่อมโทรศัพท์
                                 </Link>
                             </Box>
                             <Box display={'flex'} alignItems={'center'}  fontSize={'clamp(14px, 1vw, 18px)'} w={'max-content'} px={2} h={'2rem'}>
-                                <Link href={'/'} style={{ textDecoration: 'none'}}>
+                                <Link href={'/about'} style={{ textDecoration: 'none'}}>
                                     เกี่ยวกับเรา
                                 </Link>
                             </Box>

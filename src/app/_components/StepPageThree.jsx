@@ -18,7 +18,7 @@ const StepPageThree = ({nextStep}) => {
                                     </Box>
                                     <Flex flexDirection={'row'} flexGrow={1}>
                                         <Flex justifyContent={{base:'center',md:'start'}} flexDirection={'column'} w={'70%'} fontSize={'12px'} h={'4rem'} >
-                                            <Text fontWeight={'bold'} fontSize={{ base: '12px', md: '16px' }}>รายการรับซื้อ</Text>
+                                            <Text fontWeight={'bold'} fontSize={{ base: '12px', md: '16px' }}>รายการรับฝาก</Text>
                                             <Text fontSize={{ base: '12px', md: '16px' }}>iPhone 11 128 GB</Text>
                                         </Flex>
                                         {/* รูปภาพสินค้า */}

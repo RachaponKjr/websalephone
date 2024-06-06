@@ -12,17 +12,17 @@ const DrawerLayOut = ({ placement, onClose, isOpen }) => {
                         <Flex flexDirection={'column'} h={'100%'} justifyContent={'space-between'}>
                             <Flex color={"#7F3A8A"} flexDirection={'column'} gap={6}>
                                 <Flex flexDirection={'column'} gap={2}>
-                                    <Link borderBottom={"2px solid #DADADA"} py={2} _hover={{ textDecoration: "none", fontWeight: "700" }}>
+                                    <Link href='/solephone' borderBottom={"2px solid #DADADA"} py={2} _hover={{ textDecoration: "none", fontWeight: "700" }}>
                                         ขายโทรศัพท์
                                     </Link>
-                                    <Link borderBottom={"2px solid #DADADA"} py={2} _hover={{ textDecoration: "none", fontWeight: "700" }}>
+                                    <Link href='/fixphone' borderBottom={"2px solid #DADADA"} py={2} _hover={{ textDecoration: "none", fontWeight: "700" }}>
                                         ซ่อมโทรศัพท์
                                     </Link>
-                                    <Link borderBottom={"2px solid #DADADA"} py={2} _hover={{ textDecoration: "none", fontWeight: "700" }}>
+                                    <Link href='/about' borderBottom={"2px solid #DADADA"} py={2} _hover={{ textDecoration: "none", fontWeight: "700" }}>
                                         เกี่ยวกับเรา
                                     </Link>
                                 </Flex>
-                                <Link display={'flex'} alignItems={'center'} gap={2} _hover={{ textDecoration: "none", fontWeight: "700" }}>
+                                <Link href='/' display={'flex'} alignItems={'center'} gap={2} _hover={{ textDecoration: "none", fontWeight: "700" }}>
                                     <Box w={18} h={18}>
                                         <svg width="100%" height="100%" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g clip-path="url(#clip0_255_3698)">

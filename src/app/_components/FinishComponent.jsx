@@ -15,7 +15,7 @@ const FinishComponent = () => {
                                 <Image src="/phone.png" alt="iphone11" fill style={{objectFit:'cover'}}/>
                                 </Box>
                                 <Flex justifyContent={{ base: 'center', md: 'start' }} flexDirection={'column'} w={'70%'} fontSize={'12px'} h={'4rem'} >
-                                    <Text fontWeight={'bold'} fontSize={{ base: '13px', md: '16px' }}>รายการรับซื้อ</Text>
+                                    <Text fontWeight={'bold'} fontSize={{ base: '13px', md: '16px' }}>รายการรับฝาก</Text>
                                     <Text fontSize={{ base: '12px', md: '16px' }}>iPhone 11 128 GB</Text>
                                 </Flex>
                             </Flex>

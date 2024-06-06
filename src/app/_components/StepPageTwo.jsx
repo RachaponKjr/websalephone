@@ -186,7 +186,7 @@ const StepPageTwo = ({ nextStep }) => {
                                                         <AccordionIcon />
                                                     </AccordionButton>
                                                     <AccordionPanel pb={4}>
-                                                        <Flex gap={4} flexWrap={'wrap'}>
+                                                        <Flex gap={4} flexWrap={{base:'nowrap',md:'wrap'}} flexDirection={{base:'column',md:'row'}}>
                                                             {item.options.map((item, index) =>
                                                             (
                                                                 <>
@@ -197,7 +197,7 @@ const StepPageTwo = ({ nextStep }) => {
                                                                                 key={index}
                                                                                 bg={select[item.name] === item.value ? '#E7D8F7' : '#ffffff'}
                                                                                 border={select[item.name] === item.value ? '2px solid #7F3A8A' : '2px solid #8F8F8F'}
-                                                                                px={4} py={1} rounded={'md'} cursor={'pointer'} _hover={{ bg: '#E7D8F7', border: '2px solid #7F3A8A' }} onClick={() => toggleFC(type, item.name, item.value)}>
+                                                                                px={4} py={{base:2.5,md:1}} rounded={{base:'xl',md:'md'}} cursor={'pointer'} _hover={{ bg: '#E7D8F7', border: '2px solid #7F3A8A' }} onClick={() => toggleFC(type, item.name, item.value)}>
                                                                                 <Text as={'h6'} fontSize={'13px'} fontWeight={'bold'}>{item.value}</Text>
                                                                             </Box>
                                                                         </> :
@@ -207,7 +207,7 @@ const StepPageTwo = ({ nextStep }) => {
                                                                                 // bg={type === "select" ? select[item.name] === item.value ? '#E7D8F7' : '#ffffff' : chackInArray(item.name, item.value) ? '#E7D8F7' : '#ffffff'}
                                                                                 bg={select[item.name]?.includes(item.value) ? '#E7D8F7' : '#ffffff'}
                                                                                 border={select[item.name]?.includes(item.value) ? '2px solid #7F3A8A' : '2px solid #8F8F8F'}
-                                                                                px={4} py={1} rounded={'md'} cursor={'pointer'} _hover={{ bg: '#E7D8F7', border: '2px solid #7F3A8A' }} onClick={(event) => toggleFC(type, item.name, item.value,event)}>
+                                                                                px={4} py={{base:2.5,md:1}} rounded={'md'} cursor={'pointer'} _hover={{ bg: '#E7D8F7', border: '2px solid #7F3A8A' }} onClick={(event) => toggleFC(type, item.name, item.value,event)}>
                                                                                 <Text as={'h6'} fontSize={'13px'} fontWeight={'bold'}>{item.value}</Text>
                                                                             </Box>
                                                                         </>
