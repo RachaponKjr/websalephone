@@ -14,7 +14,7 @@ const Footer = () => {
                         <GridItem justifySelf={'center'}>
                             <Flex flexDirection={'column'} gap={4} alignItems={'center'}>
                                 {/* รูปภาพ */}
-                                <Box position={'relative'} w={{base:'4rem',lg:'6rem'}} aspectRatio={'1/1'}>
+                                <Box position={'relative'} w={{base:'4rem',lg:'5rem'}} aspectRatio={'1/1'}>
                                     <Image src={'/imgs/footer-imgs/accept.png'} alt={'logo'} fill style={{objectFit: 'contain'}} />
                                 </Box>
                                 {/* คำอธิบาย */}
@@ -30,7 +30,7 @@ const Footer = () => {
                         <GridItem justifySelf={'center'}>
                             <Flex flexDirection={'column'} gap={4} alignItems={'center'}>
                                 {/* รูปภาพ */}
-                                <Box position={'relative'} w={{base:'4rem',lg:'6rem'}} aspectRatio={'1/1'}>
+                                <Box position={'relative'} w={{base:'4rem',lg:'5rem'}} aspectRatio={'1/1'}>
                                     <Image src={'/imgs/footer-imgs/money.png'} alt={'logo'} fill style={{objectFit: 'contain'}} />
                                 </Box>
                                 {/* คำอธิบาย */}
@@ -46,7 +46,7 @@ const Footer = () => {
                         <GridItem justifySelf={'center'}>
                             <Flex flexDirection={'column'} gap={4} alignItems={'center'}>
                                 {/* รูปภาพ */}
-                                <Box position={'relative'} w={{base:'4rem',lg:'6rem'}} aspectRatio={'1/1'}>
+                                <Box position={'relative'} w={{base:'4rem',lg:'5rem'}} aspectRatio={'1/1'}>
                                     <Image src={'/imgs/footer-imgs/linechart.png'} alt={'logo'} fill style={{objectFit: 'contain'}} />
                                 </Box>
                                 {/* คำอธิบาย */}
@@ -62,7 +62,7 @@ const Footer = () => {
                         <GridItem justifySelf={'center'}>
                             <Flex flexDirection={'column'} gap={4} alignItems={'center'}>
                                 {/* รูปภาพ */}
-                                <Box position={'relative'} w={{base:'4rem',lg:'6rem'}} aspectRatio={'1/1'}>
+                                <Box position={'relative'} w={{base:'4rem',lg:'5rem'}} aspectRatio={'1/1'}>
                                     <Image src={'/imgs/footer-imgs/customer.png'} alt={'logo'} fill style={{objectFit: 'contain'}} />
                                 </Box>
                                 {/* คำอธิบาย */}

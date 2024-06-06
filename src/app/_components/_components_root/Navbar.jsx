@@ -21,7 +21,7 @@ const Navbar = () => {
                         <Flex gap={{base: 1, lg: 2}}>
                             {/* Link กดไปหน้าต่าง */}
                             <Box display={'flex'} alignItems={'center'} fontSize={'clamp(14px, 1vw, 18px)'} w={'max-content'} px={2} h={'2rem'}>
-                                <Link href={'/'} style={{ textDecoration: 'none'}}>
+                                <Link href={'/solephone'} style={{ textDecoration: 'none'}}>
                                     ขายโทรศัพท์
                                 </Link>
                             </Box>

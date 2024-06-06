@@ -128,7 +128,7 @@ const StepPageTwo = ({ nextStep }) => {
     return (
         <>
             <Box w={'full'} h={'full'} px={{ base: 2, md: "1rem", lg: "5rem" }} mb={24}>
-                <Flex gap={{ base: 0, md: 4 }} flexDirection={{ base: 'column', md: 'row' }} mx={{ base: 0, md: "auto" }} w={{ base: 'full', lg: "60rem" }} h={'full'} boxShadow={{ base: "rgba(0, 0, 0, 0.16) 0px 1px 4px", md: 'none' }}>
+                <Flex gap={{ base: 0, md: 4 }} flexDirection={{ base: 'column', md: 'row' }} mx={{ base: 0, md: "auto" }} w={{ base: 'full', lg: "70rem" }} h={'full'} boxShadow={{ base: "rgba(0, 0, 0, 0.16) 0px 1px 4px", md: 'none' }}>
                     <Box p={4}>
                         {/* ส่วนกล่อง การรักษาความปลอดภัย */}
                         <Flex flexDirection={'column'} w={'full'} h={{ base: 'full', md: 'max-content' }} bg={'#E7D8F7'} border={'2px solid #7F3A8A'} rounded={'lg'} py={4} gap={4}>
@@ -140,24 +140,24 @@ const StepPageTwo = ({ nextStep }) => {
                                         <path d="M7.5 4.95898L7.5 6.37565" stroke="#2A353D" stroke-width="1.5" stroke-linecap="round" />
                                     </svg>
                                 </Box>
-                                <Text as={'h4'} fontSize={'14px'} fontWeight={'bold'}>การรักษาความปลอดภัยของ Apple</Text>
+                                <Text as={'h4'} fontSize={{base:'14px',md:'18px'}} fontWeight={'bold'}>การรักษาความปลอดภัยของ Apple</Text>
                             </Flex>
                             {/* ข้อความของการรักษาความปลอดภัย */}
-                            <Flex flexDirection={'column'} px={4} gap={4}>
+                            <Flex flexDirection={'column'} px={4} gap={4} fontSize={{base:'12px',md:'14px'}}>
                                 <Box>
-                                    <Text as={'h6'} fontSize={'12px'}>
+                                    <Text as={'h6'} >
                                         Ipad หากทำการลบข้อมูลการตั้งค่าของเครื่อง จะหมดปัญหาความเสี่ยงเกี่ยวกับการรั่วไหล
                                         ของข้อมูลเครื่อง เพราะฉะนั้นผู้ใช้สามารถวางใจในการขายสินค้าโทรศัพท์ให้แก่ทางบริษัท
                                     </Text>
                                 </Box>
                                 <Box>
-                                    <Text as={'h6'} fontSize={'12px'}>
+                                    <Text as={'h6'} >
                                         1 ไฟล์แต่ละไฟล์ในIpadจะมีการเข้ารหัสแบบสร้างขึ้นเองและจะได้รับการจัดเก็บอย่างปลอดภัย
                                         ในฮาทร์ดิสก์ของ Ipad
                                     </Text>
                                 </Box>
                                 <Box>
-                                    <Text as={'h6'} fontSize={'12px'}>
+                                    <Text as={'h6'} >
                                         2 หากผู้ใช้ทำการลบข้อมูลและคืนการตั้งค่าเดิมทั้งหมดเทียบเท่ากับการลบไฟล์ทั้งหมด
                                         ในIpad  จะไม่มี โอกาสในการกู้ข้อมูลและการตั้งค่าคืนกลับมา
                                     </Text>

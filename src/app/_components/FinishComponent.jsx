@@ -1,4 +1,5 @@
 import { Box, Flex, Grid, GridItem, Text, space } from '@chakra-ui/react'
+import Image from 'next/image'
 import React from 'react'
 
 const FinishComponent = () => {
@@ -10,7 +11,9 @@ const FinishComponent = () => {
                         <Flex flexDirection={{ base: "column", md: "row" }} gap={{ base: 0, md: 3 }}>
                             <Flex flexDirection={{base:'row-reverse',md:'row'}} flexGrow={1} gap={4}>
                                 {/* รูปภาพสินค้า */}
-                                <Box flexGrow={1} aspectRatio={'3/3.5'}></Box>
+                                <Box flexGrow={1} aspectRatio={'3/3.5'} position={'relative'}>
+                                <Image src="/phone.png" alt="iphone11" fill style={{objectFit:'cover'}}/>
+                                </Box>
                                 <Flex justifyContent={{ base: 'center', md: 'start' }} flexDirection={'column'} w={'70%'} fontSize={'12px'} h={'4rem'} >
                                     <Text fontWeight={'bold'} fontSize={{ base: '13px', md: '16px' }}>รายการรับซื้อ</Text>
                                     <Text fontSize={{ base: '12px', md: '16px' }}>iPhone 11 128 GB</Text>
