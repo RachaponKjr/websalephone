@@ -1,11 +1,8 @@
 'use client'
-import React, { useState } from 'react'
-import Image from "next/image";
+import React from 'react'
 import { Box, Flex, Grid, GridItem, HStack, Text } from "@chakra-ui/react";
 
 const StepComponent = ({numStep}) => {
-
-  console.log(numStep)
   return (
     <>
       {/* step เเสดงขั้นตอนต่างๆ */}
