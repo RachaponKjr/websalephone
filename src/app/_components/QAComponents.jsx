@@ -13,7 +13,7 @@ const QAComponents = () => {
                     <GridItem >
                         <Flex>
                             {/* รูปภาพ */}
-                            <Box minW={{base:'5rem',lg:'6rem'}} aspectRatio={'1/1'} position={'relative'}>
+                            <Box minW={{base:'4rem',lg:'6rem'}} aspectRatio={'1/1'} position={'relative'}>
                                 <Image src={'/imgs/QA-imgs/pic1.png'} alt={'logo'} fill style={{ objectFit: 'contain' }} />
                             </Box>
                             <Box flexGrow={1}>
@@ -27,7 +27,7 @@ const QAComponents = () => {
                     <GridItem >
                         <Flex>
                             {/* รูปภาพ */}
-                            <Box minW={{base:'5rem',lg:'6rem'}} aspectRatio={'1/1'} position={'relative'}>
+                            <Box minW={{base:'4rem',lg:'6rem'}} aspectRatio={'1/1'} position={'relative'}>
                                 <Image src={'/imgs/QA-imgs/pic2.png'} alt={'logo'} fill style={{ objectFit: 'contain' }} />
                             </Box>
                             <Box flexGrow={1}>
@@ -45,7 +45,7 @@ const QAComponents = () => {
                     <GridItem >
                         <Flex>
                             {/* รูปภาพ */}
-                            <Box minW={{base:'5rem',lg:'6rem'}} aspectRatio={'1/1'} position={'relative'}>
+                            <Box minW={{base:'4rem',lg:'6rem'}} aspectRatio={'1/1'} position={'relative'}>
                                 <Image src={'/imgs/QA-imgs/pic3.png'} alt={'logo'} fill style={{ objectFit: 'contain' }} />
                             </Box>
                             <Box flexGrow={1}>
@@ -60,7 +60,7 @@ const QAComponents = () => {
                     <GridItem >
                         <Flex>
                             {/* รูปภาพ */}
-                            <Box minW={{base:'5rem',lg:'6rem'}} inset={-2} aspectRatio={'1/1'} position={'relative'}>
+                            <Box minW={{base:'4rem',lg:'6rem'}} inset={-2} aspectRatio={'1/1'} position={'relative'}>
                                 <Image src={'/imgs/QA-imgs/pic4.png'} alt={'logo'} fill style={{ objectFit: 'contain' }} />
                             </Box>
                             <Box flexGrow={1}>
