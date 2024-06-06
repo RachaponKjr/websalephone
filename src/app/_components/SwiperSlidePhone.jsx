@@ -8,6 +8,7 @@ import { Navigation } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 import { Box, Flex, Text } from '@chakra-ui/react';
+import Image from 'next/image';
 
 
 const SwiperSlidePhone = () => {
@@ -67,11 +68,12 @@ const SwiperSlidePhone = () => {
             <>
               <SwiperSlide key={index}>
                 <Flex flexDirection={'column'} justifyContent={'start'} alignItems={'center'} w={'full'} h={'full'}>
-                  <Box w={'full'} h={'80%'} position={'relative'} boxShadow={'sm'}>
+                  <Box w={'full'} h={'80%'} position={'relative'} boxShadow={'sm'} display={'flex'} justifyContent={'center'} alignItems={'center'}>
                     {/* ป้ายประหยัด */}
                     <Box position={'absolute'} px={2} py={1} w={'max-content'} bg={'#004331'} top={4}>
                       <Text color={'white'} fontSize={{base:6,md:12}} fontWeight={'bold'}>ประหยัด ฿ 14,210</Text>
                     </Box>
+                    <Image src={'/phone.png'} alt={'phone'} width={150} height={150} />
                   </Box>
                   {/* ปุ่มเพิ่มสินค้า */}
                   <Box w={{base:'100%',lg:'max-content'}} h={'max-content'} bg={'#7E3A89'} px={{lg:4,xl:6}} mt={{base:0,md:2,lg:0}} py={{base:1,md:2}} rounded={{base:'none',md:'md'}} position={'relative'} top={{base:0,lg:-2}}>

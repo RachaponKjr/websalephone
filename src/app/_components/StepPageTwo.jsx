@@ -98,7 +98,7 @@ const StepPageTwo = ({ nextStep }) => {
         }
     ]
 
-    const toggleFC = (type, key, value) => {
+    const toggleFC = (type, key, value, event) => {
         if (type === "array") {
             toggleAddToArray(key, value)
         } else {
@@ -113,7 +113,7 @@ const StepPageTwo = ({ nextStep }) => {
             [key]: value,
         }));
     }
-    const toggleAddToArray = (key, value) => {
+    const toggleAddToArray = (key, value,item) => {
         setSelect((prevSelect) => {
             const valueArray = prevSelect[key].includes(value) ? prevSelect[key].filter(item => item !== value) : [...prevSelect[key], value];
             return {
@@ -122,13 +122,8 @@ const StepPageTwo = ({ nextStep }) => {
             }
         })
     }
-    const chackInArray = (name, value) => {
-        const array = select[name]
-        const result = array?.includes(value)
-        return result
-    }
     useEffect(() => {
-        console.log(select)
+        // console.log(select)
     }, [select])
     return (
         <>
@@ -187,7 +182,7 @@ const StepPageTwo = ({ nextStep }) => {
                                                 <AccordionItem bg={'#EFEFEF'} rounded={'lg'}>
                                                     <AccordionButton _expanded={{ bg: 'transparent' }} position={'relative'}>
                                                         <Box as='span' flex='1' textAlign='left' fontSize={'14px'}>{index + 1}. {item.name}</Box>
-                                                        {type === "select" ? <Text position={'absolute'} right={10} fontSize={'14px'} color={'#7F3A8A'}>{select[item.value]}</Text> : null}
+                                                        {type === "select" ? <Text position={'absolute'} right={10} fontSize={'14px'}>{select[item.value]}</Text> : null}
                                                         <AccordionIcon />
                                                     </AccordionButton>
                                                     <AccordionPanel pb={4}>
@@ -195,14 +190,35 @@ const StepPageTwo = ({ nextStep }) => {
                                                             {item.options.map((item, index) =>
                                                             (
                                                                 <>
-                                                                    {chackInArray(item.name, item.value)}
-                                                                    <Box
+                                                                    {/* {chackInArray(item.name, item.value)} */}
+                                                                    {type === "select" ?
+                                                                        <>
+                                                                            <Box
+                                                                                key={index}
+                                                                                bg={select[item.name] === item.value ? '#E7D8F7' : '#ffffff'}
+                                                                                border={select[item.name] === item.value ? '2px solid #7F3A8A' : '2px solid #8F8F8F'}
+                                                                                px={4} py={1} rounded={'md'} cursor={'pointer'} _hover={{ bg: '#E7D8F7', border: '2px solid #7F3A8A' }} onClick={() => toggleFC(type, item.name, item.value)}>
+                                                                                <Text as={'h6'} fontSize={'13px'} fontWeight={'bold'}>{item.value}</Text>
+                                                                            </Box>
+                                                                        </> :
+                                                                        <>
+                                                                            <Box
+                                                                                key={index}
+                                                                                // bg={type === "select" ? select[item.name] === item.value ? '#E7D8F7' : '#ffffff' : chackInArray(item.name, item.value) ? '#E7D8F7' : '#ffffff'}
+                                                                                bg={select[item.name]?.includes(item.value) ? '#E7D8F7' : '#ffffff'}
+                                                                                border={select[item.name]?.includes(item.value) ? '2px solid #7F3A8A' : '2px solid #8F8F8F'}
+                                                                                px={4} py={1} rounded={'md'} cursor={'pointer'} _hover={{ bg: '#E7D8F7', border: '2px solid #7F3A8A' }} onClick={(event) => toggleFC(type, item.name, item.value,event)}>
+                                                                                <Text as={'h6'} fontSize={'13px'} fontWeight={'bold'}>{item.value}</Text>
+                                                                            </Box>
+                                                                        </>
+                                                                    }
+                                                                    {/* <Box
                                                                         key={index}
                                                                         bg={type === "select" ? select[item.name] === item.value ? '#E7D8F7' : '#ffffff' : chackInArray(item.name, item.value) ? '#E7D8F7' : '#ffffff'}
                                                                         border={type === "select" ? select[item.name] === item.value ? '2px solid #7F3A8A' : '2px solid #8F8F8F' : chackInArray(item.name, item.value) ? '2px solid #7F3A8A' : '2px solid #8F8F8F'}
                                                                         px={4} py={1} rounded={'md'} cursor={'pointer'} _hover={{ bg: '#E7D8F7', border: '2px solid #7F3A8A' }} onClick={() => toggleFC(type, item.name, item.value)}>
                                                                         <Text as={'h6'} fontSize={'13px'} fontWeight={'bold'}>{item.value}</Text>
-                                                                    </Box>
+                                                                    </Box> */}
                                                                 </>
                                                             ))}
                                                         </Flex>

@@ -9,7 +9,7 @@ import StepPageThree from './StepPageThree'
 import FinishComponent from './FinishComponent'
 
 const RootHomePage = () => {
-  const [step, setStep] = React.useState(1)
+  const [stepNum, setStep] = React.useState(0)
   const [loading, setLoading] = React.useState(false)
 
   const nextStep = (step) => {
@@ -21,12 +21,12 @@ const RootHomePage = () => {
     setStep(step)
   }
   // debug
-  // console.log(step)
+  // console.log(stepNum)
   return (
     <>
-      <StepComponent step={step} />
+      <StepComponent numStep={stepNum} />
       {
-        step === 0 ? (
+        stepNum === 0 ? (
           <>
             <EstimateComponent nextStep={nextStep} />
             <QAComponents />
@@ -38,9 +38,9 @@ const RootHomePage = () => {
                   <LoadingComponent />
                 ) : (
                   <> 
-                    {step === 1 && <StepPageTwo nextStep={nextStep} />}
-                    {step === 2 && <StepPageThree nextStep={nextStep}/>}
-                    {step === 3 && <FinishComponent/>}
+                    {stepNum === 1 && <StepPageTwo nextStep={nextStep} />}
+                    {stepNum === 2 && <StepPageThree nextStep={nextStep}/>}
+                    {stepNum === 3 && <FinishComponent/>}
                   </>
                 )
               }

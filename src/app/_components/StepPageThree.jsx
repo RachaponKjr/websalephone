@@ -1,4 +1,5 @@
 import { Box, Button, Flex, Grid, GridItem, HStack, Input, Radio, RadioGroup, Tab, Text } from '@chakra-ui/react'
+import Image from 'next/image'
 import React from 'react'
 
 const StepPageThree = ({nextStep}) => {
@@ -7,7 +8,7 @@ const StepPageThree = ({nextStep}) => {
             <Box w={'full'} h={'full'} p={2} mb={24}>
                 <Flex flexDirection={{ base: 'column', md: "row" }} w={{base:'full',lg:"60rem"}} mx={{base:0,lg:'auto'}} h={'full'} gap={0} boxShadow={{ base: "rgba(0, 0, 0, 0.16) 0px 1px 4px", md: "none" }}>
                     {/* เลือก โทรศัพท์ */}
-                    <RadioGroup defaultValue='2'>
+                    <RadioGroup defaultValue='1'>
                         <Grid gridTemplateColumns={{ base: 'repeat(2,1fr)', md: 'repeat(1,1fr)' }} h={'full'} gap={{ base: 2, md: 4 }} p={2}>
                             <GridItem display={"flex"} flexDirection={'column'} bgColor={{base:"#ffffff",md:"#FAFAFA"}} boxShadow={"rgba(0, 0, 0, 0.16) 0px 1px 4px"} p={2}>
                                 <Flex flexDirection={{base:"column",md:"row"}} gap={{base:0,md:3}}>
@@ -21,7 +22,9 @@ const StepPageThree = ({nextStep}) => {
                                             <Text fontSize={{ base: '12px', md: '16px' }}>iPhone 11 128 GB</Text>
                                         </Flex>
                                         {/* รูปภาพสินค้า */}
-                                        <Box flexGrow={1} aspectRatio={'3/3.5'}></Box>
+                                        <Box flexGrow={1} aspectRatio={'3/3.5'} position={'relative'}>
+                                            <Image src={'/phone.png'} layout={'fill'} objectFit={'contain'} alt={'iphone11'} />
+                                        </Box>
                                     </Flex>
                                 </Flex>
                                 <Box w={'full'} px={{base:0,md:2,lg:4}}>
@@ -38,7 +41,7 @@ const StepPageThree = ({nextStep}) => {
                                 <Flex flexDirection={{base:"column",md:"row"}} gap={{base:0,md:3}}>
                                     {/* ปุ่มเลือกสินค้า */}
                                     <Box h={'1rem'}>
-                                        <Radio value='1' bg={'#DADADA'} border={'1px solid'} borderColor={'#AFAFAF'} _checked={{ bg: '#A186BD', borderColor: '#7F3A8A' }}></Radio>
+                                        <Radio value='2' bg={'#DADADA'} border={'1px solid'} borderColor={'#AFAFAF'} _checked={{ bg: '#A186BD', borderColor: '#7F3A8A' }}></Radio>
                                     </Box>
                                     <Flex flexDirection={'row'} flexGrow={1}>
                                         <Flex justifyContent={{base:'center',md:'start'}} flexDirection={'column'} w={'70%'} fontSize={'12px'} h={'4rem'} >
@@ -46,7 +49,9 @@ const StepPageThree = ({nextStep}) => {
                                             <Text fontSize={{ base: '12px', md: '16px' }}>iPhone 11 128 GB</Text>
                                         </Flex>
                                         {/* รูปภาพสินค้า */}
-                                        <Box flexGrow={1} aspectRatio={'3/3.5'}></Box>
+                                        <Box flexGrow={1} aspectRatio={'3/3.5'} position={'relative'}>
+                                            <Image src={'/phone.png'} layout={'fill'} objectFit={'contain'} alt={'iphone11'} />
+                                        </Box>
                                     </Flex>
                                 </Flex>
                                 <Box w={'full'} px={{base:0,md:2,lg:4}}>
