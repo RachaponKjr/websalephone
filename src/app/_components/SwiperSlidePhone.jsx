@@ -31,9 +31,9 @@ const SwiperSlidePhone = () => {
   return (
     <>
       <Box w={'full'} h={'full'} position={'relative'}>
-        <Box position={'absolute'} top={-4} left={0} w={'full'} h={'15rem'} zIndex={1}>
+        {/* <Box position={'absolute'} top={-4} left={0} w={'full'} h={'15rem'} zIndex={1}>
           <Image src={'/banner.png'} fill style={{objectFit: 'contain'}} alt='s' />
-        </Box>
+        </Box> */}
         {/* ปุ่มเลื่อนซ้าย */}
         <Box ref={prevRef} zIndex={2} cursor={'pointer'} display={{base:'none',lg:'flex'}} justifyContent={'center'} alignItems={'center'} w={{lg:12,xl:14}} h={{lg:12,xl:14}} bg={'#7F3A89'} position={'absolute'} rounded={'full'} border={'2px solid white'} top={'50%'} transform={'translateY(-50%)'} left={'-8'}>
           <svg width="16" height="16" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -76,7 +76,7 @@ const SwiperSlidePhone = () => {
                     <Box position={'absolute'} px={2} py={1} w={'max-content'} bg={'#004331'} top={4}>
                       <Text color={'white'} fontSize={{base:6,md:12}} fontWeight={'bold'}>ประหยัด ฿ 14,210</Text>
                     </Box>
-                    {/* <Image src={'/phone.png'} alt={'phone'} width={150} height={150} /> */}
+                    <Image src={'/phone.png'} alt={'phone'} width={150} height={150} />
                   </Box>
                   {/* ปุ่มเพิ่มสินค้า */}
                   <Box w={{base:'100%',lg:'max-content'}} h={'max-content'} bg={'#7E3A89'} px={{lg:4,xl:6}} mt={{base:0,md:2,lg:0}} py={{base:1,md:2}} rounded={{base:'none',md:'md'}} position={'relative'} top={{base:0,lg:-2}}>
