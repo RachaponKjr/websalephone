@@ -2,6 +2,7 @@
 import { Box, Button, Container, Flex, HStack, Select, Stack, Text, VStack } from '@chakra-ui/react'
 import React from 'react'
 import SwiperSlidePhone from './SwiperSlidePhone'
+import Image from 'next/image'
 
 const EstimateComponent = ({ nextStep }) => {
 
@@ -12,12 +13,13 @@ const EstimateComponent = ({ nextStep }) => {
         <Box w={'full'} h={'max-content'} bg={{ base: "none", lg: '#7F3A8A' }} spacing={0}>
             <Container maxW='container.xl' h='full' px={{ base: 0, lg: "auto" }}>
                 <Flex flexDirection={{ base: 'column-reverse', lg: 'row' }}  h={'full'} gap={{ lg: 4, xl: 6 }} pt={{base:0,md:6}} alignItems={{base:'start',md:'center'}}>
-                    <Flex bg={{ base: "#7F3A8A", lg: "none" }} px={{base:2,md:4}} py={{base:6,lg:0}} w={{ base: '100%', lg: '60%' }} h={'full'} flexDirection={'column'} gap={4} mt={'1rem'} >
-                        <Box display={{ base: 'none', lg: 'flex' }} justifyContent={'center'} w={'100%'} h={'max-content'} >
+                    <Flex bg={{ base: "#7F3A8A", lg: "none" }} px={{base:4,md:6}} py={{base:4,md:6,lg:0}} w={{ base: '100%', lg: '60%' }} h={'full'} flexDirection={'column'} gap={4} mt={'1rem'} >
+                        {/* <Box display={{ base: 'none', lg: 'flex' }} justifyContent={'center'} w={'100%'} h={'max-content'} >
                             <Text color={"#7F3A8A"} bg={'white'} fontSize={{ lg: '24px', xl: '30px' }} fontWeight={'bold'} px={'10'} py={3} rounded={'3xl'}>IPHONE</Text>
-                        </Box>
-                        <Box w={'full'} h={{base:"10rem",md:'287px'}} bg={'white'} rounded={{base:'none',lg:'2xl'}} p={2}>
-                            <SwiperSlidePhone />
+                        </Box> */}
+                        <Box h={{base:'10rem',md:"22rem",lg:'16rem',xl:'22rem'}} ml={{base:0,lg:4}} position={'relative'} rounded={{base:'none',lg:'none'}} p={2}>
+                            {/* <SwiperSlidePhone /> */}
+                            <Image src={"/banner.png"} fill objectFit='cover' objectPosition='center' alt='banner'/>
                         </Box>
                     </Flex>
                     <Box w={{base:'100%',md:'30rem'}} display={'flex'} justifyContent={'center'} px={4}>
