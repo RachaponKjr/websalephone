@@ -65,7 +65,7 @@ const SwiperSlidePhone = () => {
           {/* loop item ออกมา */}
           {itemlength.map((item, index) => (
             <>
-              <SwiperSlide>
+              <SwiperSlide key={index}>
                 <Flex flexDirection={'column'} justifyContent={'start'} alignItems={'center'} w={'full'} h={'full'}>
                   <Box w={'full'} h={'80%'} position={'relative'} boxShadow={'sm'}>
                     {/* ป้ายประหยัด */}

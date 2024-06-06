@@ -1,14 +1,142 @@
+'use client'
 import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Button, Flex, Text } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-const StepPageTwo = ({nextStep}) => {
+const StepPageTwo = ({ nextStep }) => {
+    const [select, setSelect] = useState(
+        {
+            model: null,
+            guarantee: null,
+            quality: null,
+            screen: null,
+            display: null,
+            accessories: [],
+            problems: []
+        }
+    )
+    const menuSelect = [
+        {
+            id: 1,
+            name: 'Model',
+            value: 'model',
+            type: 'select',
+            options: [
+                { id: 1, name: 'model', value: 'เครื่องไทย TH' },
+                { id: 2, name: 'model', value: 'Model ZP 14,15 Series' },
+                { id: 3, name: 'model', value: 'เครื่องนอกโมเดลอื่น' },
+            ]
+        },
+        {
+            id: 2,
+            name: 'ประกัน',
+            value: 'guarantee',
+            type: 'select',
+            options: [
+                { id: 1, name: 'guarantee', value: 'เหลือมากกว่า 4 เดือน' },
+                { id: 2, name: 'guarantee', value: 'เหลือน้อยกว่า 4 เดือน' },
+                { id: 3, name: 'guarantee', value: 'หมดประกัน' },
+            ]
+        },
+        {
+            id: 3,
+            name: 'สภาพตัวเครื่อง',
+            value: 'quality',
+            type: 'select',
+            options: [
+                { id: 1, name: 'quality', value: 'เครื่องไทย TH' },
+                { id: 2, name: 'quality', value: 'Model ZP 14,15 Series' },
+                { id: 3, name: 'quality', value: 'เครื่องนอกโมเดลอื่น' },
+            ]
+        }
+        ,
+        {
+            id: 4,
+            name: 'สภาพหน้าจอ',
+            value: 'screen',
+            type: 'select',
+            options: [
+                { id: 1, name: 'screen', value: 'เครื่องไทย TH' },
+                { id: 2, name: 'screen', value: 'Model ZP 14,15 Series' },
+                { id: 3, name: 'screen', value: 'เครื่องนอกโมเดลอื่น' },
+            ]
+        }
+        ,
+        {
+            id: 5,
+            name: 'การแสดงภาพหน้าจอ',
+            value: 'display',
+            type: 'select',
+            options: [
+                { id: 1, name: 'display', value: 'เครื่องไทย TH' },
+                { id: 2, name: 'display', value: 'Model ZP 14,15 Series' },
+                { id: 3, name: 'display', value: 'เครื่องนอกโมเดลอื่น' },
+            ]
+        }
+        ,
+        {
+            id: 6,
+            name: 'อุปกรณ์เสริม (กล่อง, หูฟัง, สายชาร์จ, หัวชาร์จ)',
+            value: 'accessories',
+            type: 'array',
+            options: [
+                { id: 1, name: 'accessories', value: 'เครื่องไทย TH' },
+                { id: 2, name: 'accessories', value: 'Model ZP 14,15 Series' },
+                { id: 3, name: 'accessories', value: 'เครื่องนอกโมเดลอื่น' },
+            ]
+        }
+        ,
+        {
+            id: 7,
+            name: 'ปัญหาด้านการใช้งาน (เลือกได้มากกว่า 1 ข้อ)',
+            value: 'problems',
+            type: 'array',
+            options: [
+                { id: 1, name: 'problems', value: 'เครื่องไทย TH' },
+                { id: 2, name: 'problems', value: 'Model ZP 14,15 Series' },
+                { id: 3, name: 'problems', value: 'เครื่องนอกโมเดลอื่น' },
+            ]
+        }
+    ]
+
+    const toggleFC = (type, key, value) => {
+        if (type === "array") {
+            toggleAddToArray(key, value)
+        } else {
+            toggleSelect(key, value)
+        }
+    }
+    const toggleSelect = (key, value) => {
+
+        console.log(key, value)
+        setSelect((prevSelect) => ({
+            ...prevSelect,
+            [key]: value,
+        }));
+    }
+    const toggleAddToArray = (key, value) => {
+        setSelect((prevSelect) => {
+            const valueArray = prevSelect[key].includes(value) ? prevSelect[key].filter(item => item !== value) : [...prevSelect[key], value];
+            return {
+                ...prevSelect,
+                [key]: valueArray
+            }
+        })
+    }
+    const chackInArray = (name, value) => {
+        const array = select[name]
+        const result = array?.includes(value)
+        return result
+    }
+    useEffect(() => {
+        console.log(select)
+    }, [select])
     return (
         <>
-            <Box w={'full'} h={'full'} px={{base:2,md:"1rem",lg:"5rem"}} mb={24}>
-                <Flex gap={{base:0,md:4}} flexDirection={{base:'column',md:'row'}} mx={{base:0,md:"auto"}} w={{base:'full',lg:"60rem"}} h={'full'} boxShadow={{base:"rgba(0, 0, 0, 0.16) 0px 1px 4px",md:'none' }}>
+            <Box w={'full'} h={'full'} px={{ base: 2, md: "1rem", lg: "5rem" }} mb={24}>
+                <Flex gap={{ base: 0, md: 4 }} flexDirection={{ base: 'column', md: 'row' }} mx={{ base: 0, md: "auto" }} w={{ base: 'full', lg: "60rem" }} h={'full'} boxShadow={{ base: "rgba(0, 0, 0, 0.16) 0px 1px 4px", md: 'none' }}>
                     <Box p={4}>
                         {/* ส่วนกล่อง การรักษาความปลอดภัย */}
-                        <Flex flexDirection={'column'} w={'full'} h={{base:'full',md:'max-content'}} bg={'#E7D8F7'} border={'2px solid #7F3A8A'} rounded={'lg'} py={4} gap={4}>
+                        <Flex flexDirection={'column'} w={'full'} h={{ base: 'full', md: 'max-content' }} bg={'#E7D8F7'} border={'2px solid #7F3A8A'} rounded={'lg'} py={4} gap={4}>
                             {/* Text หัวข้อของการรักษาความปลอดภัย */}
                             <Flex borderLeft={'3px solid #7F3A8A'} alignItems={'center'} p={2} gap={2}>
                                 <Box>
@@ -42,161 +170,55 @@ const StepPageTwo = ({nextStep}) => {
                             </Flex>
                         </Flex>
                     </Box>
-                    <Flex flexDirection={{base:"column" , md:"column"}} w={{base:'full',md:"770px"}} h={'full'} boxShadow={"rgba(0, 0, 0, 0.16) 0px 1px 4px" }>
-                    {/* ส่วนกล่องสำหรับเลือก รูปแบบสินค้า */}
-                    <Flex flexDirection={'column'} gap={4}>
-                        {/* ส่วนหัวข้อของสำหรับเลือก รูปแบบสินค้า */}
-                        <Box borderLeft={'4px solid #7F3A8A'} h={'24px'} display={'flex'} alignItems={'center'}>
-                            <Text as={'h3'} ml={2} fontWeight={'bold'} fontSize={{base:12,md:14,lg:16}}>ระบุข้อมูลการขาย iPhone iPhone 11 128 GB</Text>
-                        </Box>
-                        {/* Accordion เปิด เลือก รายการ */}
-                        <Accordion allowToggle display={'flex'} flexDirection={'column'} gap={3} border={'0px solid white'} px={2}>
-                            {/* Item ของ Accordion 1 */}
-                            <AccordionItem bg={'#EFEFEF'} rounded={'lg'}>
-                                <AccordionButton _expanded={{ bg: 'transparent'}}>
-                                    <Box as='span' flex='1' textAlign='left' fontSize={'14px'}>1. Model</Box>
-                                    <AccordionIcon />
-                                </AccordionButton>
-                                <AccordionPanel pb={4}>
-                                    <Flex gap={4} flexWrap={'wrap'}>
-                                        <Box bg={'#E7D8F7'} border={'2px solid #7F3A8A'} px={4} py={1} rounded={'md'}>
-                                            <Text as={'h6'} fontSize={'13px'} fontWeight={'bold'}>เครื่องไทย TH</Text>
-                                        </Box>
-                                        <Box bg={'#ffffff'} border={'2px solid #8F8F8F'} px={4} py={1} rounded={'md'}>
-                                            <Text as={'h6'} fontSize={'13px'} fontWeight={'bold'}>Model ZP 14,15 Series</Text>
-                                        </Box>
-                                        <Box bg={'#ffffff'} border={'2px solid #8F8F8F'} px={4} py={1} rounded={'md'}>
-                                            <Text as={'h6'} fontSize={'13px'} fontWeight={'bold'}>เครื่องนอกโมเดลอื่น</Text>
-                                        </Box>
-                                    </Flex>
-                                </AccordionPanel>
-                            </AccordionItem>
-                            {/* Item ของ Accordion 2*/}
-                            <AccordionItem bg={'#EFEFEF'} rounded={'lg'}>
-                                <AccordionButton _expanded={{ bg: 'transparent'}}>
-                                    <Box as='span' flex='1' textAlign='left' fontSize={'14px'}>2. ประกัน</Box>
-                                    <AccordionIcon />
-                                </AccordionButton>
-                                <AccordionPanel pb={4}>
-                                    <Flex gap={4} flexWrap={'wrap'}>
-                                        <Box bg={'#E7D8F7'} border={'2px solid #7F3A8A'} px={4} py={1} rounded={'md'}>
-                                            <Text as={'h6'} fontSize={'13px'} fontWeight={'bold'}>เหลือมากกว่า 4เดือน</Text>
-                                        </Box>
-                                        <Box bg={'#ffffff'} border={'2px solid #8F8F8F'} px={4} py={1} rounded={'md'}>
-                                            <Text as={'h6'} fontSize={'13px'} fontWeight={'bold'}>เหลือน้อยกว่า 4เดือน</Text>
-                                        </Box>
-                                        <Box bg={'#ffffff'} border={'2px solid #8F8F8F'} px={4} py={1} rounded={'md'}>
-                                            <Text as={'h6'} fontSize={'13px'} fontWeight={'bold'}>หมดประกัน</Text>
-                                        </Box>
-                                    </Flex>
-                                </AccordionPanel>
-                            </AccordionItem>
-                            {/* Item ของ Accordion 3*/}
-                            <AccordionItem bg={'#EFEFEF'} rounded={'lg'}>
-                                <AccordionButton _expanded={{ bg: 'transparent'}}>
-                                    <Box as='span' flex='1' textAlign='left' fontSize={'14px'}>3. สภาพตัวเครื่อง</Box>
-                                    <AccordionIcon />
-                                </AccordionButton>
-                                <AccordionPanel pb={4}>
-                                    <Flex gap={4} flexWrap={'wrap'}>
-                                        <Box bg={'#E7D8F7'} border={'2px solid #7F3A8A'} px={4} py={1} rounded={'md'}>
-                                            <Text as={'h6'} fontSize={'13px'} fontWeight={'bold'}>เหลือมากกว่า 4เดือน</Text>
-                                        </Box>
-                                        <Box bg={'#ffffff'} border={'2px solid #8F8F8F'} px={4} py={1} rounded={'md'}>
-                                            <Text as={'h6'} fontSize={'13px'} fontWeight={'bold'}>เหลือน้อยกว่า 4เดือน</Text>
-                                        </Box>
-                                        <Box bg={'#ffffff'} border={'2px solid #8F8F8F'} px={4} py={1} rounded={'md'}>
-                                            <Text as={'h6'} fontSize={'13px'} fontWeight={'bold'}>หมดประกัน</Text>
-                                        </Box>
-                                    </Flex>
-                                </AccordionPanel>
-                            </AccordionItem>
-                            {/* Item ของ Accordion 4*/}
-                            <AccordionItem bg={'#EFEFEF'} rounded={'lg'}>
-                                <AccordionButton _expanded={{ bg: 'transparent'}}>
-                                    <Box as='span' flex='1' textAlign='left' fontSize={'14px'}>4. สภาพหน้าจอ</Box>
-                                    <AccordionIcon />
-                                </AccordionButton>
-                                <AccordionPanel pb={4}>
-                                    <Flex gap={4} flexWrap={'wrap'}>
-                                        <Box bg={'#E7D8F7'} border={'2px solid #7F3A8A'} px={4} py={1} rounded={'md'}>
-                                            <Text as={'h6'} fontSize={'13px'} fontWeight={'bold'}>เหลือมากกว่า 4เดือน</Text>
-                                        </Box>
-                                        <Box bg={'#ffffff'} border={'2px solid #8F8F8F'} px={4} py={1} rounded={'md'}>
-                                            <Text as={'h6'} fontSize={'13px'} fontWeight={'bold'}>เหลือน้อยกว่า 4เดือน</Text>
-                                        </Box>
-                                        <Box bg={'#ffffff'} border={'2px solid #8F8F8F'} px={4} py={1} rounded={'md'}>
-                                            <Text as={'h6'} fontSize={'13px'} fontWeight={'bold'}>หมดประกัน</Text>
-                                        </Box>
-                                    </Flex>
-                                </AccordionPanel>
-                            </AccordionItem>
-                            {/* Item ของ Accordion 5*/}
-                            <AccordionItem bg={'#EFEFEF'} rounded={'lg'}>
-                                <AccordionButton _expanded={{ bg: 'transparent'}}>
-                                    <Box as='span' flex='1' textAlign='left' fontSize={'14px'}>5. สภาพตัวเครื่อง</Box>
-                                    <AccordionIcon />
-                                </AccordionButton>
-                                <AccordionPanel pb={4}>
-                                    <Flex gap={4} flexWrap={'wrap'}>
-                                        <Box bg={'#E7D8F7'} border={'2px solid #7F3A8A'} px={4} py={1} rounded={'md'}>
-                                            <Text as={'h6'} fontSize={'13px'} fontWeight={'bold'}>เหลือมากกว่า 4เดือน</Text>
-                                        </Box>
-                                        <Box bg={'#ffffff'} border={'2px solid #8F8F8F'} px={4} py={1} rounded={'md'}>
-                                            <Text as={'h6'} fontSize={'13px'} fontWeight={'bold'}>เหลือน้อยกว่า 4เดือน</Text>
-                                        </Box>
-                                        <Box bg={'#ffffff'} border={'2px solid #8F8F8F'} px={4} py={1} rounded={'md'}>
-                                            <Text as={'h6'} fontSize={'13px'} fontWeight={'bold'}>หมดประกัน</Text>
-                                        </Box>
-                                    </Flex>
-                                </AccordionPanel>
-                            </AccordionItem>
-                            {/* Item ของ Accordion 6*/}
-                            <AccordionItem bg={'#EFEFEF'} rounded={'lg'}>
-                                <AccordionButton _expanded={{ bg: 'transparent'}}>
-                                    <Box as='span' flex='1' textAlign='left' fontSize={'14px'}>6. อุปกรณ์เสริม (กล่อง, หูฟัง, สายชาร์จ, หัวชาร์จ)</Box>
-                                    <AccordionIcon />
-                                </AccordionButton>
-                                <AccordionPanel pb={4}>
-                                    <Flex gap={4} flexWrap={'wrap'}>
-                                        <Box bg={'#E7D8F7'} border={'2px solid #7F3A8A'} px={4} py={1} rounded={'md'}>
-                                            <Text as={'h6'} fontSize={'13px'} fontWeight={'bold'}>เหลือมากกว่า 4เดือน</Text>
-                                        </Box>
-                                        <Box bg={'#ffffff'} border={'2px solid #8F8F8F'} px={4} py={1} rounded={'md'}>
-                                            <Text as={'h6'} fontSize={'13px'} fontWeight={'bold'}>เหลือน้อยกว่า 4เดือน</Text>
-                                        </Box>
-                                        <Box bg={'#ffffff'} border={'2px solid #8F8F8F'} px={4} py={1} rounded={'md'}>
-                                            <Text as={'h6'} fontSize={'13px'} fontWeight={'bold'}>หมดประกัน</Text>
-                                        </Box>
-                                    </Flex>
-                                </AccordionPanel>
-                            </AccordionItem>
-                            {/* Item ของ Accordion 7*/}
-                            <AccordionItem bg={'#EFEFEF'} rounded={'lg'}>
-                                <AccordionButton _expanded={{ bg: 'transparent'}}>
-                                    <Box as='span' flex='1' textAlign='left' fontSize={'14px'}>7. ปัญหาด้านการใช้งาน (เลือกได้มากกว่า 1 ข้อ)</Box>
-                                    <AccordionIcon />
-                                </AccordionButton>
-                                <AccordionPanel pb={4}>
-                                    <Flex gap={4} flexWrap={'wrap'}>
-                                        <Box bg={'#E7D8F7'} border={'2px solid #7F3A8A'} px={4} py={1} rounded={'md'}>
-                                            <Text as={'h6'} fontSize={'13px'} fontWeight={'bold'}>เหลือมากกว่า 4เดือน</Text>
-                                        </Box>
-                                        <Box bg={'#ffffff'} border={'2px solid #8F8F8F'} px={4} py={1} rounded={'md'}>
-                                            <Text as={'h6'} fontSize={'13px'} fontWeight={'bold'}>เหลือน้อยกว่า 4เดือน</Text>
-                                        </Box>
-                                        <Box bg={'#ffffff'} border={'2px solid #8F8F8F'} px={4} py={1} rounded={'md'}>
-                                            <Text as={'h6'} fontSize={'13px'} fontWeight={'bold'}>หมดประกัน</Text>
-                                        </Box>
-                                    </Flex>
-                                </AccordionPanel>
-                            </AccordionItem>
-                        </Accordion>
-                    </Flex>
-                    {/* ปุ่มประเมิณราคา */}
-                    <Flex justify={'center'} my={'2rem'}>
-                        <Button bg={'#7F3A89'} color={'white'} w={'15rem'} rounded={'lg'} onClick={() => nextStep(2)}>ประเมิณราคา</Button>
-                    </Flex>
+                    <Flex flexDirection={{ base: "column", md: "column" }} w={{ base: 'full', md: "770px" }} h={'full'} boxShadow={"rgba(0, 0, 0, 0.16) 0px 1px 4px"}>
+                        {/* ส่วนกล่องสำหรับเลือก รูปแบบสินค้า */}
+                        <Flex flexDirection={'column'} gap={4}>
+                            {/* ส่วนหัวข้อของสำหรับเลือก รูปแบบสินค้า */}
+                            <Box borderLeft={'4px solid #7F3A8A'} h={'24px'} display={'flex'} alignItems={'center'}>
+                                <Text as={'h3'} ml={2} fontWeight={'bold'} fontSize={{ base: 12, md: 14, lg: 16 }}>ระบุข้อมูลการขาย iPhone iPhone 11 128 GB</Text>
+                            </Box>
+                            {/* Accordion เปิด เลือก รายการ */}
+                            <Accordion allowToggle display={'flex'} flexDirection={'column'} gap={3} border={'0px solid white'} px={2}>
+                                {
+                                    menuSelect.map((item, index) => {
+                                        let type = item.type;
+                                        return (
+                                            <>
+                                                <AccordionItem bg={'#EFEFEF'} rounded={'lg'}>
+                                                    <AccordionButton _expanded={{ bg: 'transparent' }} position={'relative'}>
+                                                        <Box as='span' flex='1' textAlign='left' fontSize={'14px'}>{index + 1}. {item.name}</Box>
+                                                        {type === "select" ? <Text position={'absolute'} right={10} fontSize={'14px'} color={'#7F3A8A'}>{select[item.value]}</Text> : null}
+                                                        <AccordionIcon />
+                                                    </AccordionButton>
+                                                    <AccordionPanel pb={4}>
+                                                        <Flex gap={4} flexWrap={'wrap'}>
+                                                            {item.options.map((item, index) =>
+                                                            (
+                                                                <>
+                                                                    {chackInArray(item.name, item.value)}
+                                                                    <Box
+                                                                        key={index}
+                                                                        bg={type === "select" ? select[item.name] === item.value ? '#E7D8F7' : '#ffffff' : chackInArray(item.name, item.value) ? '#E7D8F7' : '#ffffff'}
+                                                                        border={type === "select" ? select[item.name] === item.value ? '2px solid #7F3A8A' : '2px solid #8F8F8F' : chackInArray(item.name, item.value) ? '2px solid #7F3A8A' : '2px solid #8F8F8F'}
+                                                                        px={4} py={1} rounded={'md'} cursor={'pointer'} _hover={{ bg: '#E7D8F7', border: '2px solid #7F3A8A' }} onClick={() => toggleFC(type, item.name, item.value)}>
+                                                                        <Text as={'h6'} fontSize={'13px'} fontWeight={'bold'}>{item.value}</Text>
+                                                                    </Box>
+                                                                </>
+                                                            ))}
+                                                        </Flex>
+                                                    </AccordionPanel>
+                                                </AccordionItem>
+                                            </>
+                                        )
+                                    }
+                                    )
+                                }
+                            </Accordion>
+                        </Flex>
+                        {/* ปุ่มประเมิณราคา */}
+                        <Flex justify={'center'} my={'2rem'}>
+                            <Button bg={'#7F3A89'} color={'white'} w={'15rem'} rounded={'lg'} onClick={() => nextStep(2)}>ประเมิณราคา</Button>
+                        </Flex>
                     </Flex>
                 </Flex>
             </Box>
