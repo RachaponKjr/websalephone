@@ -1,8 +1,12 @@
+'use client'
 import { Box, Container, Flex, Stack, Text } from '@chakra-ui/react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 
 const Navbar = () => {
+    const url = usePathname()
+    console.log(url)
     return (
         <Box display={{base: 'none', md: 'block'}} h={'115px'} w={"100%"} borderBottom={"3px solid #7F3A8A"} boxShadow={"rgba(0, 0, 0, 0.24) 0px 3px 8px"}>
             <Container maxW='container.xl' h='full'>
@@ -22,17 +26,17 @@ const Navbar = () => {
                         </Flex>
                         <Flex gap={{base: 1, lg: 2}}>
                             {/* Link กดไปหน้าต่าง */}
-                            <Box display={'flex'} alignItems={'center'} fontSize={'clamp(14px, 1vw, 18px)'} w={'max-content'} px={2} h={'2rem'}>
+                            <Box display={'flex'} alignItems={'center'} position={'relative'} fontSize={'clamp(14px, 1vw, 18px)'} w={'max-content'} px={2} h={'2rem'} _before={{ content: '""', position: 'absolute', bottom: 0, left: 0, width: `${url === '/solephone' ? '100%' : '0px'}`,zIndex: -1, backgroundColor: '#7F3A8A',height: '3px',transitionDuration: '0.5s' }} _hover={{_before: {width: '100%'}}}>
                                 <Link href={'/solephone'} style={{ textDecoration: 'none'}}>
                                     ขายโทรศัพท์
                                 </Link>
                             </Box>
-                            <Box display={'flex'} alignItems={'center'}  fontSize={'clamp(14px, 1vw, 18px)'} w={'max-content'} px={2} h={'2rem'}>
+                            <Box display={'flex'} alignItems={'center'}  fontSize={'clamp(14px, 1vw, 18px)'} w={'max-content'} px={2} h={'2rem'} position={'relative'} _before={{ content: '""', position: 'absolute', bottom: 0, left: 0, width: `${url === '/fixphone' ? '100%' : '0px'}`,zIndex: -1, backgroundColor: '#7F3A8A',height: '3px',transitionDuration: '0.5s' }} _hover={{_before: {width: '100%'}}}>
                                 <Link href={'/fixphone'} style={{ textDecoration: 'none'}}>
                                     ซ่อมโทรศัพท์
                                 </Link>
                             </Box>
-                            <Box display={'flex'} alignItems={'center'}  fontSize={'clamp(14px, 1vw, 18px)'} w={'max-content'} px={2} h={'2rem'}>
+                            <Box display={'flex'} alignItems={'center'}  fontSize={'clamp(14px, 1vw, 18px)'} w={'max-content'} px={2} h={'2rem'} position={'relative'} _before={{ content: '""', position: 'absolute', bottom: 0, left: 0, width: `${url === '/about' ? '100%' : '0px'}`,zIndex: -1, backgroundColor: '#7F3A8A',height: '3px',transitionDuration: '0.5s' }} _hover={{_before: {width: '100%'}}}>
                                 <Link href={'/about'} style={{ textDecoration: 'none'}}>
                                     เกี่ยวกับเรา
                                 </Link>
