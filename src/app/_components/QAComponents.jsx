@@ -11,7 +11,7 @@ const QAComponents = () => {
             <VStack spacing={{ base: 8, md: 20 }} px={{ base: 4, lg: 0 }} py={4} maxW={'100%'} w={'60rem'}>
                 <Grid gridTemplateColumns={{base:'repeat(1,minmax(0,1fr))', md:'repeat(2,minmax(0,1fr))'}} gap={{base:10, md:16}} w={'full'}>
                     <GridItem >
-                        <Flex>
+                        <Flex gap={2}>
                             {/* รูปภาพ */}
                             <Box minW={{base:'4rem',lg:'6rem'}} aspectRatio={'1/1'} position={'relative'}>
                                 <Image src={'/imgs/QA-imgs/pic1.png'} alt={'logo'} fill style={{ objectFit: 'contain' }} />
@@ -25,7 +25,7 @@ const QAComponents = () => {
                         </Flex>
                     </GridItem>
                     <GridItem >
-                        <Flex>
+                        <Flex gap={2}>
                             {/* รูปภาพ */}
                             <Box minW={{base:'4rem',lg:'6rem'}} aspectRatio={'1/1'} position={'relative'}>
                                 <Image src={'/imgs/QA-imgs/pic2.png'} alt={'logo'} fill style={{ objectFit: 'contain' }} />
@@ -43,7 +43,7 @@ const QAComponents = () => {
                         </Flex>
                     </GridItem>
                     <GridItem >
-                        <Flex>
+                        <Flex gap={2}>
                             {/* รูปภาพ */}
                             <Box minW={{base:'4rem',lg:'6rem'}} aspectRatio={'1/1'} position={'relative'}>
                                 <Image src={'/imgs/QA-imgs/pic3.png'} alt={'logo'} fill style={{ objectFit: 'contain' }} />
@@ -58,7 +58,7 @@ const QAComponents = () => {
                         </Flex>
                     </GridItem>
                     <GridItem >
-                        <Flex>
+                        <Flex gap={2}>
                             {/* รูปภาพ */}
                             <Box minW={{base:'4rem',lg:'6rem'}} inset={-2} aspectRatio={'1/1'} position={'relative'}>
                                 <Image src={'/imgs/QA-imgs/pic4.png'} alt={'logo'} fill style={{ objectFit: 'contain' }} />
