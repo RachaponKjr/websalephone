@@ -6,13 +6,13 @@ const StepComponent = ({numStep}) => {
   return (
     <>
       {/* step เเสดงขั้นตอนต่างๆ */}
-      <Flex mt={{ base: '11rem', md: 8 }} mb={8} w={"full"} h={"max-content"} justifyContent={"center"} gap={10} px={2}>
+      <Flex mt={{ base: '11rem', md: 8 }} mb={4} w={"full"} h={"max-content"} justifyContent={"center"} gap={10} px={2}>
         <Grid templateColumns={'repeat(4,minmax(0,1fr))'} gap={{ base: 8, md: 20, lg: 28 }} w={{ base: 'full', md: "max-content" }} justifyContent={"center"}>
           {/* ขั้นตอนที่ 1 */}
           <GridItem position={'relative'}>
             <Flex flexDir={'column'} alignItems={'center'} gap={2}>
               {/* รูปภาพ */}
-              <Box w={{ base: '3rem', lg: '5rem' }} display={'flex'} justifyContent={'center'} aspectRatio={'1/1'} position={'relative'}>
+              <Box w={{ base: '3rem', lg: '2rem' }} display={'flex'} justifyContent={'center'} aspectRatio={'1/1'} position={'relative'}>
                 <Box w={{ base: '1.8rem', md: '2rem', lg: "3rem" }} >
                   <svg style={{ width: "100%", height: "100%" }} viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="0.451172" width="13.72" height="23.6552" rx="3" fill={`${numStep === 0 ? "#7F3A8A" : "#8F8F8F"}`} />
@@ -36,7 +36,7 @@ const StepComponent = ({numStep}) => {
           <GridItem position={'relative'}>
             <Flex flexDir={'column'} alignItems={'center'} gap={2}>
               {/* รูปภาพ */}
-              <Box w={{ base: '3rem', lg: '5rem' }} aspectRatio={'1/1'} position={'relative'} bgImage={numStep === 1 ? './imgs/step-imgs/noteactive.png' : './imgs/step-imgs/note.png'} bgRepeat={'no-repeat'} bgSize={'contain'} bgPosition={'center'}>
+              <Box w={{ base: '3rem', lg: '3rem' }} aspectRatio={'1/1'} position={'relative'} bgImage={numStep === 1 ? './imgs/step-imgs/noteactive.png' : './imgs/step-imgs/note.png'} bgRepeat={'no-repeat'} bgSize={'contain'} bgPosition={'center'}>
               </Box>
               <Text textAlign={'center'} fontSize={{ base: 12, md: 16 }} color={numStep === 1 ? "#7F3A8A" : "#8F8F8F"}>
                 ระบุสภาพ<br />
@@ -53,7 +53,7 @@ const StepComponent = ({numStep}) => {
           <GridItem position={'relative'}>
             <Flex flexDir={'column'} alignItems={'center'} gap={2}>
               {/* รูปภาพ */}
-              <Box w={{ base: '3rem', lg: '5rem' }} aspectRatio={'1/1'} position={'relative'} bgImage={numStep === 2 ? './imgs/step-imgs/calendaractive.png' : './imgs/step-imgs/calendar.png'} bgRepeat={'no-repeat'} bgSize={'contain'} bgPosition={'center'}>
+              <Box w={{ base: '3rem', lg: '3rem' }} aspectRatio={'1/1'} position={'relative'} bgImage={numStep === 2 ? './imgs/step-imgs/calendaractive.png' : './imgs/step-imgs/calendar.png'} bgRepeat={'no-repeat'} bgSize={'contain'} bgPosition={'center'}>
               </Box>
               <Text textAlign={'center'} fontSize={{ base: 12, md: 16 }} color={numStep === 2 ? "#7F3A8A" : "#8F8F8F"}>
                 นัดหมาย<br />
@@ -70,7 +70,7 @@ const StepComponent = ({numStep}) => {
           <GridItem position={'relative'}>
             <Flex flexDir={'column'} alignItems={'center'} gap={2}>
               {/* รูปภาพ */}
-              <Box w={{ base: '3rem', lg: '5rem' }} aspectRatio={'1/1'} position={'relative'} bgImage={numStep === 3 ? './imgs/step-imgs/handshakeactive.png' : './imgs/step-imgs/handshake.png'} bgRepeat={'no-repeat'} bgSize={'contain'} bgPosition={'center'}>
+              <Box w={{ base: '3rem', lg: '3rem' }} aspectRatio={'1/1'} position={'relative'} bgImage={numStep === 3 ? './imgs/step-imgs/handshakeactive.png' : './imgs/step-imgs/handshake.png'} bgRepeat={'no-repeat'} bgSize={'contain'} bgPosition={'center'}>
               </Box>
               <Text textAlign={'center'} fontSize={{ base: 12, md: 16 }} color={numStep === 3 ? "#7F3A8A" : "#8F8F8F"}>
                 เจอกัน<br />
