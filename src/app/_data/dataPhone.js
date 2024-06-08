@@ -4,605 +4,141 @@ export const data = [
     name: "iPhone",
     model: [
       {
-        name: "iphon15 Pro Max",
-        memory: [
-          {
-            name: "iPhone 15 Pro Max",
-            memory: [{ size: "256GB" }, { size: "512GB" }, { size: "1TB" }],
-          },
-          {
-            name: "iPhone 15 Pro",
-            memory: [
-              { size: "128GB" },
-              { size: "256GB" },
-              { size: "512GB" },
-              { size: "1TB" },
-            ],
-          },
-          {
-            name: "iPhone 15 Plus",
-            memory: [{ size: "128GB" }, { size: "256GB" }, { size: "512GB" }],
-          },
-          {
-            name: "iPhone 15",
-            memory: [{ size: "128GB" }, { size: "256GB" }, { size: "512GB" }],
-          },
-          {
-            name: "iPhone 14 Pro Max",
-            memory: [
-              { size: "128GB" },
-              { size: "256GB" },
-              { size: "512GB" },
-              { size: "1TB" },
-            ],
-          },
-          {
-            name: "iPhone 14 Pro",
-            memory: [
-              { size: "128GB" },
-              { size: "256GB" },
-              { size: "512GB" },
-              { size: "1TB" },
-            ],
-          },
-          {
-            name: "iPhone 14 Plus",
-            memory: [{ size: "128GB" }, { size: "256GB" }, { size: "512GB" }],
-          },
-          {
-            name: "iPhone 14",
-            memory: [{ size: "128GB" }, { size: "256GB" }, { size: "512GB" }],
-          },
-          {
-            name: "iPhone 13 Pro Max",
-            memory: [
-              { size: "128GB" },
-              { size: "256GB" },
-              { size: "512GB" },
-              { size: "1TB" },
-            ],
-          },
-          {
-            name: "iPhone 13 Pro",
-            memory: [
-              { size: "128GB" },
-              { size: "256GB" },
-              { size: "512GB" },
-              { size: "1TB" },
-            ],
-          },
-          {
-            name: "iPhone 13",
-            memory: [{ size: "128GB" }, { size: "256GB" }, { size: "512GB" }],
-          },
-          {
-            name: "iPhone 13 Mini",
-            memory: [{ size: "128GB" }, { size: "256GB" }, { size: "512GB" }],
-          },
-          {
-            name: "iPhone 12 Pro Max",
-            memory: [{ size: "128GB" }, { size: "256GB" }, { size: "512GB" }],
-          },
-          {
-            name: "iPhone 12 Pro",
-            memory: [{ size: "128GB" }, { size: "256GB" }, { size: "512GB" }],
-          },
-          {
-            name: "iPhone 12",
-            memory: [{ size: "64GB" }, { size: "128GB" }, { size: "256GB" }],
-          },
-          {
-            name: "iPhone 12 Mini",
-            memory: [{ size: "64GB" }, { size: "128GB" }, { size: "256GB" }],
-          },
-          {
-            name: "iPhone SE (3rd generation)",
-            memory: [{ size: "64GB" }, { size: "128GB" }, { size: "256GB" }],
-          },
-          {
-            name: "iPhone 11 Pro Max",
-            memory: [{ size: "64GB" }, { size: "256GB" }, { size: "512GB" }],
-          },
-          {
-            name: "iPhone 11 Pro",
-            memory: [{ size: "64GB" }, { size: "256GB" }, { size: "512GB" }],
-          },
-          {
-            name: "iPhone 11",
-            memory: [{ size: "64GB" }, { size: "128GB" }, { size: "256GB" }],
-          },
-          {
-            name: "iPhone XS Max",
-            memory: [{ size: "64GB" }, { size: "256GB" }, { size: "512GB" }],
-          },
-          {
-            name: "iPhone XS",
-            memory: [{ size: "64GB" }, { size: "256GB" }, { size: "512GB" }],
-          },
-          {
-            name: "iPhone XR",
-            memory: [{ size: "64GB" }, { size: "128GB" }, { size: "256GB" }],
-          },
-          {
-            name: "iPhone X",
-            memory: [{ size: "64GB" }, { size: "256GB" }],
-          },
-          {
-            name: "iPhone 8 Plus",
-            memory: [{ size: "64GB" }, { size: "128GB" }, { size: "256GB" }],
-          },
-          {
-            name: "iPhone 8",
-            memory: [{ size: "64GB" }, { size: "128GB" }, { size: "256GB" }],
-          },
-          {
-            name: "iPhone 7 Plus",
-            memory: [{ size: "32GB" }, { size: "128GB" }, { size: "256GB" }],
-          },
-          {
-            name: "iPhone 7",
-            memory: [{ size: "32GB" }, { size: "128GB" }, { size: "256GB" }],
-          },
-        ],
-      },
-      {
-        name: "iPhone 15 Plus ",
-        memory: [
-          {
-            size: "128 GB",
-          },
-          {
-            size: "256 GB",
-          },
-          {
-            size: "512 GB",
-          },
-          {
-            size: "1 TB",
-          },
-        ],
-      },
-      {
-        name: "iPhone 15 ",
-        memory: [
-          {
-            size: "128 GB",
-          },
-          {
-            size: "256 GB",
-          },
-          {
-            size: "512 GB",
-          },
-          {
-            size: "1 TB",
-          },
-        ],
+        name: "iPhone 15 Pro Max",
+        memory: [{ size: "256GB" }, { size: "512GB" }, { size: "1TB" }],
       },
       {
         name: "iPhone 15 Pro",
         memory: [
-          {
-            size: "128 GB",
-          },
-          {
-            size: "256 GB",
-          },
-          {
-            size: "512 GB",
-          },
-          {
-            size: "1 TB",
-          },
+          { size: "128GB" },
+          { size: "256GB" },
+          { size: "512GB" },
+          { size: "1TB" },
         ],
       },
       {
-        name: "iPhone 14 Pro Max ",
+        name: "iPhone 15 Plus",
+        memory: [{ size: "128GB" }, { size: "256GB" }, { size: "512GB" }],
+      },
+      {
+        name: "iPhone 15",
+        memory: [{ size: "128GB" }, { size: "256GB" }, { size: "512GB" }],
+      },
+      {
+        name: "iPhone 14 Pro Max",
         memory: [
-          {
-            size: "128 GB",
-          },
-          {
-            size: "256 GB",
-          },
-          {
-            size: "512 GB",
-          },
-          {
-            size: "1 TB",
-          },
+          { size: "128GB" },
+          { size: "256GB" },
+          { size: "512GB" },
+          { size: "1TB" },
         ],
       },
       {
-        name: "iPhone 14 Pro ",
+        name: "iPhone 14 Pro",
         memory: [
-          {
-            size: "128 GB",
-          },
-          {
-            size: "256 GB",
-          },
-          {
-            size: "512 GB",
-          },
-          {
-            size: "1 TB",
-          },
+          { size: "128GB" },
+          { size: "256GB" },
+          { size: "512GB" },
+          { size: "1TB" },
         ],
       },
       {
         name: "iPhone 14 Plus",
-        memory: [
-          {
-            size: "128 GB",
-          },
-          {
-            size: "256 GB",
-          },
-          {
-            size: "512 GB",
-          },
-          {
-            size: "1 TB",
-          },
-        ],
+        memory: [{ size: "128GB" }, { size: "256GB" }, { size: "512GB" }],
       },
       {
-        name: "iPhone 14 ",
-        memory: [
-          {
-            size: "128 GB",
-          },
-          {
-            size: "256 GB",
-          },
-          {
-            size: "512 GB",
-          },
-          {
-            size: "1 TB",
-          },
-        ],
+        name: "iPhone 14",
+        memory: [{ size: "128GB" }, { size: "256GB" }, { size: "512GB" }],
       },
       {
         name: "iPhone 13 Pro Max",
         memory: [
-          {
-            size: "128 GB",
-          },
-          {
-            size: "256 GB",
-          },
-          {
-            size: "512 GB",
-          },
-          {
-            size: "1 TB",
-          },
+          { size: "128GB" },
+          { size: "256GB" },
+          { size: "512GB" },
+          { size: "1TB" },
         ],
       },
       {
         name: "iPhone 13 Pro",
         memory: [
-          {
-            size: "128 GB",
-          },
-          {
-            size: "256 GB",
-          },
-          {
-            size: "512 GB",
-          },
-          {
-            size: "1 TB",
-          },
-        ],
-      },
-      {
-        name: "iPhone 13 Mini",
-        memory: [
-          {
-            size: "128 GB",
-          },
-          {
-            size: "256 GB",
-          },
-          {
-            size: "512 GB",
-          },
-          {
-            size: "1 TB",
-          },
+          { size: "128GB" },
+          { size: "256GB" },
+          { size: "512GB" },
+          { size: "1TB" },
         ],
       },
       {
         name: "iPhone 13",
-        memory: [
-          {
-            size: "128 GB",
-          },
-          {
-            size: "256 GB",
-          },
-          {
-            size: "512 GB",
-          },
-          {
-            size: "1 TB",
-          },
-        ],
+        memory: [{ size: "128GB" }, { size: "256GB" }, { size: "512GB" }],
+      },
+      {
+        name: "iPhone 13 Mini",
+        memory: [{ size: "128GB" }, { size: "256GB" }, { size: "512GB" }],
       },
       {
         name: "iPhone 12 Pro Max",
-        memory: [
-          {
-            size: "128 GB",
-          },
-          {
-            size: "256 GB",
-          },
-          {
-            size: "512 GB",
-          },
-          {
-            size: "1 TB",
-          },
-        ],
+        memory: [{ size: "128GB" }, { size: "256GB" }, { size: "512GB" }],
       },
       {
         name: "iPhone 12 Pro",
-        memory: [
-          {
-            size: "128 GB",
-          },
-          {
-            size: "256 GB",
-          },
-          {
-            size: "512 GB",
-          },
-          {
-            size: "1 TB",
-          },
-        ],
-      },
-      {
-        name: "iPhone 12 Mini",
-        memory: [
-          {
-            size: "128 GB",
-          },
-          {
-            size: "256 GB",
-          },
-          {
-            size: "512 GB",
-          },
-          {
-            size: "1 TB",
-          },
-        ],
+        memory: [{ size: "128GB" }, { size: "256GB" }, { size: "512GB" }],
       },
       {
         name: "iPhone 12",
-        memory: [
-          {
-            size: "128 GB",
-          },
-          {
-            size: "256 GB",
-          },
-          {
-            size: "512 GB",
-          },
-          {
-            size: "1 TB",
-          },
-        ],
+        memory: [{ size: "64GB" }, { size: "128GB" }, { size: "256GB" }],
+      },
+      {
+        name: "iPhone 12 Mini",
+        memory: [{ size: "64GB" }, { size: "128GB" }, { size: "256GB" }],
+      },
+      {
+        name: "iPhone SE (3rd generation)",
+        memory: [{ size: "64GB" }, { size: "128GB" }, { size: "256GB" }],
       },
       {
         name: "iPhone 11 Pro Max",
-        memory: [
-          {
-            size: "128 GB",
-          },
-          {
-            size: "256 GB",
-          },
-          {
-            size: "512 GB",
-          },
-          {
-            size: "1 TB",
-          },
-        ],
+        memory: [{ size: "64GB" }, { size: "256GB" }, { size: "512GB" }],
       },
       {
         name: "iPhone 11 Pro",
-        memory: [
-          {
-            size: "128 GB",
-          },
-          {
-            size: "256 GB",
-          },
-          {
-            size: "512 GB",
-          },
-          {
-            size: "1 TB",
-          },
-        ],
+        memory: [{ size: "64GB" }, { size: "256GB" }, { size: "512GB" }],
       },
       {
         name: "iPhone 11",
-        memory: [
-          {
-            size: "128 GB",
-          },
-          {
-            size: "256 GB",
-          },
-          {
-            size: "512 GB",
-          },
-          {
-            size: "1 TB",
-          },
-        ],
+        memory: [{ size: "64GB" }, { size: "128GB" }, { size: "256GB" }],
       },
       {
-        name: "iPhone Xs Max",
-        memory: [
-          {
-            size: "128 GB",
-          },
-          {
-            size: "256 GB",
-          },
-          {
-            size: "512 GB",
-          },
-          {
-            size: "1 TB",
-          },
-        ],
+        name: "iPhone XS Max",
+        memory: [{ size: "64GB" }, { size: "256GB" }, { size: "512GB" }],
       },
       {
-        name: "iPhone Xs",
-        memory: [
-          {
-            size: "128 GB",
-          },
-          {
-            size: "256 GB",
-          },
-          {
-            size: "512 GB",
-          },
-          {
-            size: "1 TB",
-          },
-        ],
+        name: "iPhone XS",
+        memory: [{ size: "64GB" }, { size: "256GB" }, { size: "512GB" }],
       },
       {
-        name: "iPhone Xr",
-        memory: [
-          {
-            size: "128 GB",
-          },
-          {
-            size: "256 GB",
-          },
-          {
-            size: "512 GB",
-          },
-          {
-            size: "1 TB",
-          },
-        ],
+        name: "iPhone XR",
+        memory: [{ size: "64GB" }, { size: "128GB" }, { size: "256GB" }],
       },
       {
         name: "iPhone X",
-        memory: [
-          {
-            size: "128 GB",
-          },
-          {
-            size: "256 GB",
-          },
-          {
-            size: "512 GB",
-          },
-          {
-            size: "1 TB",
-          },
-        ],
-      },
-      {
-        name: "iPhone SE 2022",
-        memory: [
-          {
-            size: "128 GB",
-          },
-          {
-            size: "256 GB",
-          },
-          {
-            size: "512 GB",
-          },
-          {
-            size: "1 TB",
-          },
-        ],
-      },
-      {
-        name: "iPhone SE 2020",
-        memory: [
-          {
-            size: "128 GB",
-          },
-          {
-            size: "256 GB",
-          },
-          {
-            size: "512 GB",
-          },
-          {
-            size: "1 TB",
-          },
-        ],
+        memory: [{ size: "64GB" }, { size: "256GB" }],
       },
       {
         name: "iPhone 8 Plus",
-        memory: [
-          {
-            size: "128 GB",
-          },
-          {
-            size: "256 GB",
-          },
-          {
-            size: "512 GB",
-          },
-          {
-            size: "1 TB",
-          },
-        ],
+        memory: [{ size: "64GB" }, { size: "128GB" }, { size: "256GB" }],
+      },
+      {
+        name: "iPhone 8",
+        memory: [{ size: "64GB" }, { size: "128GB" }, { size: "256GB" }],
       },
       {
         name: "iPhone 7 Plus",
-        memory: [
-          {
-            size: "128 GB",
-          },
-          {
-            size: "256 GB",
-          },
-          {
-            size: "512 GB",
-          },
-          {
-            size: "1 TB",
-          },
-        ],
+        memory: [{ size: "32GB" }, { size: "128GB" }, { size: "256GB" }],
       },
       {
         name: "iPhone 7",
-        memory: [
-          {
-            size: "128 GB",
-          },
-          {
-            size: "256 GB",
-          },
-          {
-            size: "512 GB",
-          },
-          {
-            size: "1 TB",
-          },
-        ],
+        memory: [{ size: "32GB" }, { size: "128GB" }, { size: "256GB" }],
       },
     ],
   },
