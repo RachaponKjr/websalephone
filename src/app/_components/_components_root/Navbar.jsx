@@ -27,7 +27,7 @@ const Navbar = () => {
                         <Flex gap={{base: 1, lg: 2}}>
                             {/* Link กดไปหน้าต่าง */}
                             <Box display={'flex'} alignItems={'center'} position={'relative'} fontSize={'clamp(14px, 1vw, 18px)'} w={'max-content'} px={2} h={'2rem'} _before={{ content: '""', position: 'absolute', bottom: 0, left: 0, width: `${url === '/solephone' ? '100%' : '0px'}`,zIndex: -1, backgroundColor: '#7F3A8A',height: '3px',transitionDuration: '0.5s' }} _hover={{_before: {width: '100%'}}}>
-                                <Link href={'/solephone'} style={{ textDecoration: 'none'}}>
+                                <Link href={'/salephone'} style={{ textDecoration: 'none'}}>
                                     ขายโทรศัพท์
                                 </Link>
                             </Box>
