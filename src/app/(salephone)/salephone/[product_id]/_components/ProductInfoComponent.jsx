@@ -8,10 +8,10 @@ const ProductInfoComponent = () => {
     return (
         <>
             <Flex gap={{ base:2,md:8}} flexDirection={{ base: 'column', md: 'row' }} my={4} mx={{ base: 0, md: 4 }} p={{base:4,md:8}} boxShadow={"rgba(0, 0, 0, 0.24) 0px 3px 8px;"}>
-                <Box w={{ base: 'full', md: '40%' }} aspectRatio={'1/1'} bg={'#FAFAFA'}>
+                <Box w={{ base: 'full', md: '50%' }} aspectRatio={'1/1'} bg={'#FAFAFA'}>
 
                 </Box>
-                <Flex w={{ base: 'full', md: '60%' }} flexDirection={'column'} gap={2}>
+                <Flex w={{ base: 'full', md: '50%' }} flexDirection={'column'} gap={2}>
                     <Box w={'full'}>
                         <Text as={'h1'} fontWeight={'bold'} fontSize={{ base: '16px', md: '24px' }} isTruncated>สายชาร์จเร็ว สายชาร์จ Micro USB Fast Charging 1M/1.5M/2M</Text>
                     </Box>
@@ -48,7 +48,7 @@ const ProductInfoComponent = () => {
                     </Flex>
                     {/* ข้อมูลสินค้า */}
                     <Flex flexDirection={'column'} gap={4} my={{base:0,md:8}}>
-                        <Flex w={'full'}>
+                        <Flex w={'full'} flexDirection={{base:'row',md:'column',lg:'row'}}>
                             <Box w={'10rem'}>
                                 <Text as={'h6'} fontSize={{base:'14px',md:'18px'}} fontWeight={'bold'}>การจัดส่ง</Text>
                             </Box>
@@ -57,7 +57,7 @@ const ProductInfoComponent = () => {
                                 <Text as={'span'} color={'#8F8F8F'}>฿39</Text>
                             </HStack>
                         </Flex>
-                        <Flex w={'full'} alignItems={'center'}>
+                        <Flex w={'full'} flexDirection={{base:'row',md:'column',lg:'row'}}>
                             <Box w={'10rem'}>
                                 <Text as={'h6'} fontSize={{base:'14px',md:'18px'}} fontWeight={'bold'}>ตัวเลือก</Text>
                             </Box>
@@ -66,7 +66,7 @@ const ProductInfoComponent = () => {
                                 <Button border={'1px solid #7F3A8A'} _hover={{ bg: '#7F3A8A', color: 'white' }} bg={'white'} color={'#7F3A8A'} fontSize={{base:12,md:16}}>2M x1</Button>
                             </HStack>
                         </Flex>
-                        <Flex w={'full'} alignItems={{base:'flex-start',md:'center'}}>
+                        <Flex w={'full'} alignItems={{base:'flex-start',md:'start'}} flexDirection={{base:'row',md:'column',lg:'row'}}>
                             <Box w={'10rem'}>
                                 <Text as={'h6'} fontSize={{base:'14px',md:'18px'}} fontWeight={'bold'}>จำนวน</Text>
                             </Box>
@@ -84,7 +84,7 @@ const ProductInfoComponent = () => {
                             </Flex>
                         </Flex>
                     </Flex>
-                    <Flex flexDirection={{ base: 'column' }} gap={{ base: 2 }} w={'full'} spacing={4} mt={{base:0,md:8}} justifyContent={'center'}>
+                    <Flex flexDirection={{ base: 'column',md: 'row' }} gap={{ base: 2 }} w={'full'} spacing={4} mt={{base:0,md:8}} justifyContent={'center'}>
                         <BtnAddToCart />
                         <Button size={'lg'} border={'1px solid #7F3A8A'} px={10} _hover={{ bg: '#7F3A8A', color: 'white' }} bg={'#7F3A8A'} color={'#FFFFFF'}>ซื้อสินค้า</Button>
                     </Flex>
