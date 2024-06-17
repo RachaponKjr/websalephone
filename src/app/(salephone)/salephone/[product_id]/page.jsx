@@ -1,9 +1,9 @@
 import React from 'react'
-import SalePage from './SalePage'
+import ProductIDPage from './ProductIDPage'
 
 const page = () => {
     return (
-        <SalePage/>
+        <ProductIDPage />
     )
 }
 
