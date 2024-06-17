@@ -26,7 +26,7 @@ const InfoProductComponent = () => {
   ]
   return (
     <>
-      <Flex flexDirection={'column'} spacing={8} m={4} p={{base:4,md:8}} boxShadow={"rgba(0, 0, 0, 0.24) 0px 3px 8px;"}>
+      <Flex flexDirection={'column'} spacing={8} my={4} mx={{ base: 0, md: 4 }} p={{base:4,md:8}} boxShadow={"rgba(0, 0, 0, 0.24) 0px 3px 8px;"}>
         <Box>
           <Text as={'h6'} fontSize={{base:16,md:'20px'}} fontWeight={'bold'}>ข้อมูลเฉพาะของสินค้า</Text>
         </Box>
@@ -34,11 +34,11 @@ const InfoProductComponent = () => {
           {dataText.map((item, index) => (
             <>
               <Flex>
-                <Box minW={{base:'7rem',md:'15rem'}}>
-                  <Text as={'h6'} fontSize={{base:'10px',md:'16px'}} color={'#8F8F8F'}>{item.headText}</Text>
+                <Box minW={{base:'8rem',md:'15rem'}}>
+                  <Text as={'h6'} fontSize={{base:'12px',md:'16px'}} color={'#8F8F8F'}>{item.headText}</Text>
                 </Box>
                 <Box>
-                  <Text as={'span'} fontSize={{base:'8px',md:'16px'}} fontWeight={'bold'} color={'#8F8F8F'}>{item.Text}</Text>
+                  <Text as={'span'} fontSize={{base:'10px',md:'16px'}} fontWeight={'bold'} color={'#8F8F8F'}>{item.Text}</Text>
                 </Box>
               </Flex>
             </>

@@ -7,7 +7,7 @@ import BtnAddToCart from './BtnAddToCart'
 const ProductInfoComponent = () => {
     return (
         <>
-            <Flex gap={{ base:2,md:8}} flexDirection={{ base: 'column', md: 'row' }} m={4} p={{base:4,md:8}} boxShadow={"rgba(0, 0, 0, 0.24) 0px 3px 8px;"}>
+            <Flex gap={{ base:2,md:8}} flexDirection={{ base: 'column', md: 'row' }} my={4} mx={{ base: 0, md: 4 }} p={{base:4,md:8}} boxShadow={"rgba(0, 0, 0, 0.24) 0px 3px 8px;"}>
                 <Box w={{ base: 'full', md: '40%' }} aspectRatio={'1/1'} bg={'#FAFAFA'}>
 
                 </Box>
