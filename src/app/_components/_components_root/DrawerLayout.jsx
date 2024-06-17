@@ -19,7 +19,7 @@ const DrawerLayOut = ({ placement, onClose, isOpen }) => {
                                 </Box>
                             </Box>
                             {/* ชื่อ เว็บไซต์ */}
-                            <Text as={'h1'} color={'#7F3A8A'} fontSize={20} fontWeight={'bold'} my={'3rem'}>TunTun Mobile</Text>
+                            <Text as={'h1'} color={'#7F3A8A'} fontSize={20} fontWeight={'bold'} my={'3rem'} textAlign={'center'}>TunTun Mobile</Text>
                             <Flex flexDirection={'column'} gap={2} w={'full'}>
                                 <Flex flexDirection={'column'} gap={2} w={'full'}>
                                     {/* ขายโทรศัพท์ */}
