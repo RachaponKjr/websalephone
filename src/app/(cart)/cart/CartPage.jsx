@@ -44,7 +44,7 @@ export const ModalInfomation = ({ isOpen, onClose, finalRef }) => {
 
   return (
     <>
-      <Modal size={'3xl'} isCentered ref={finalRef} finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>
+      <Modal size={'2xl'} isCentered ref={finalRef} finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader textAlign={'center'} fontWeight={'bold'} fontSize={'24px'} textColor={'#7F3A8A'}>กรุณาระบุข้อมูล เพื่อให้เจ้าหน้าที่ติดต่อกลับ</ModalHeader>

@@ -1,13 +1,17 @@
+'use client'
 import NotificationComponent from '@/app/_components/_components_root/NotificationComponent'
-import { Box, Button, Flex, HStack, Text, VStack } from '@chakra-ui/react'
+import { Box, Button, Flex, HStack, Text, useDisclosure, VStack } from '@chakra-ui/react'
 import React from 'react'
 import BtnBuy from './BtnAddToCart'
 import BtnAddToCart from './BtnAddToCart'
+import { ModalInfomation } from '@/app/(cart)/cart/CartPage'
 
 const ProductInfoComponent = () => {
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const ref = React.useRef(null)
     return (
         <>
-            <Flex gap={{ base:2,md:8}} flexDirection={{ base: 'column', md: 'row' }} my={4} mx={{ base: 0, md: 4 }} p={{base:4,md:8}} boxShadow={"rgba(0, 0, 0, 0.24) 0px 3px 8px;"}>
+            <Flex ref={ref}  gap={{ base:2,md:8}} flexDirection={{ base: 'column', md: 'row' }} my={4} mx={{ base: 0, md: 4 }} p={{base:4,md:8}} boxShadow={"rgba(0, 0, 0, 0.24) 0px 3px 8px;"}>
                 <Box w={{ base: 'full', md: '50%' }} aspectRatio={'1/1'} bg={'#FAFAFA'}>
 
                 </Box>
@@ -86,10 +90,10 @@ const ProductInfoComponent = () => {
                     </Flex>
                     <Flex flexDirection={{ base: 'column',md: 'row' }} gap={{ base: 2 }} w={'full'} spacing={4} mt={{base:0,md:8}} justifyContent={'center'}>
                         <BtnAddToCart />
-                        <Button size={'lg'} border={'1px solid #7F3A8A'} px={10} _hover={{ bg: '#7F3A8A', color: 'white' }} bg={'#7F3A8A'} color={'#FFFFFF'}>ซื้อสินค้า</Button>
+                        <Button size={'lg'} border={'1px solid #7F3A8A'} px={10} _hover={{ bg: '#7F3A8A', color: 'white' }} bg={'#7F3A8A'} color={'#FFFFFF'} onClick={onOpen}>ซื้อสินค้า</Button>
                     </Flex>
                 </Flex>
-
+                <ModalInfomation isOpen={isOpen} onClose={onClose} finalRef={ref} />
             </Flex>
         </>
     )
