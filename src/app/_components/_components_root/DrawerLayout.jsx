@@ -1,6 +1,7 @@
 'use client'
-import { Box, Drawer, DrawerBody, DrawerContent, DrawerOverlay, Flex, Link, Stack, Text } from '@chakra-ui/react'
+import { Box, Drawer, DrawerBody, DrawerContent, DrawerOverlay, Flex, Stack, Text } from '@chakra-ui/react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 
