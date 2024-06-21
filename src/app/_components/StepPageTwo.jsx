@@ -136,8 +136,8 @@ const StepPageTwo = ({ nextStep }) => {
                             <Flex borderLeft={'3px solid #7F3A8A'} alignItems={'center'} p={2} gap={2}>
                                 <Box>
                                     <svg width="25" height="25" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7.49938 1.41699C5.36887 1.41699 3.98745 2.84711 2.3537 3.36838C1.6894 3.58033 1.35726 3.68631 1.22284 3.8357C1.08841 3.98509 1.04905 4.2034 0.970329 4.64C0.127917 9.31207 1.9692 13.6315 6.36044 15.3127C6.83226 15.4933 7.06816 15.5837 7.5017 15.5837C7.93524 15.5837 8.17113 15.4933 8.64292 15.3127C13.0339 13.6315 14.8734 9.31206 14.0308 4.64C13.952 4.20332 13.9126 3.98498 13.7782 3.83559C13.6437 3.68619 13.3116 3.58028 12.6473 3.36844C11.013 2.84722 9.62997 1.41699 7.49938 1.41699Z" stroke="#2A353D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M7.5 4.95898L7.5 6.37565" stroke="#2A353D" stroke-width="1.5" stroke-linecap="round" />
+                                        <path d="M7.49938 1.41699C5.36887 1.41699 3.98745 2.84711 2.3537 3.36838C1.6894 3.58033 1.35726 3.68631 1.22284 3.8357C1.08841 3.98509 1.04905 4.2034 0.970329 4.64C0.127917 9.31207 1.9692 13.6315 6.36044 15.3127C6.83226 15.4933 7.06816 15.5837 7.5017 15.5837C7.93524 15.5837 8.17113 15.4933 8.64292 15.3127C13.0339 13.6315 14.8734 9.31206 14.0308 4.64C13.952 4.20332 13.9126 3.98498 13.7782 3.83559C13.6437 3.68619 13.3116 3.58028 12.6473 3.36844C11.013 2.84722 9.62997 1.41699 7.49938 1.41699Z" stroke="#2A353D" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                        <path d="M7.5 4.95898L7.5 6.37565" stroke="#2A353D" strokeWidth="1.5" strokeLinecap="round" />
                                     </svg>
                                 </Box>
                                 <Text as={'h4'} fontSize={{base:'14px',md:'18px'}} fontWeight={'bold'}>การรักษาความปลอดภัยของ Apple</Text>
@@ -179,7 +179,7 @@ const StepPageTwo = ({ nextStep }) => {
                                         let type = item.type;
                                         return (
                                             <>
-                                                <AccordionItem bg={'#EFEFEF'} rounded={'lg'}>
+                                                <AccordionItem bg={'#EFEFEF'} rounded={'lg'} key={index}>
                                                     <AccordionButton _expanded={{ bg: 'transparent' }} position={'relative'}>
                                                         <Box as='span' flex='1' textAlign='left' fontSize={'14px'}>{index + 1}. {item.name}</Box>
                                                         {type === "select" ? <Text position={'absolute'} right={10} fontSize={'14px'}>{select[item.value]}</Text> : null}
