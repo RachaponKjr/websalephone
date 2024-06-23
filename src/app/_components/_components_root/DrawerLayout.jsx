@@ -1,12 +1,13 @@
 'use client'
-import { Box, Drawer, DrawerBody, DrawerContent, DrawerOverlay, Flex, Stack, Text } from '@chakra-ui/react'
+import { border, Box, Drawer, DrawerBody, DrawerContent, DrawerOverlay, Flex, Stack, Text } from '@chakra-ui/react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import React from 'react'
 
 const DrawerLayOut = ({ placement, onClose, isOpen }) => {
     const pathName = usePathname()
+    const route = useRouter()
     console.log(pathName)
     return (
         <>
@@ -27,20 +28,8 @@ const DrawerLayOut = ({ placement, onClose, isOpen }) => {
                             <Text as={'h1'} color={'#7F3A8A'} fontSize={20} fontWeight={'bold'} my={'3rem'} textAlign={'center'}>TunTun Mobile</Text>
                             <Flex flexDirection={'column'} gap={2} w={'full'}>
                                 <Flex flexDirection={'column'} gap={2} w={'full'}>
-                                    {/* ขายโทรศัพท์ */}
-                                    <Link href={'/salephone'}>
-                                        <Flex bg={pathName === '/salephone' ? '#7F3A8A' : 'white'} alignItems={'center'} gap={2} p={2} rounded={'lg'} w={'full'}>
-                                            <Box w={'20px'} h={'20px'}>
-                                                <svg width="100%" height="100%" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M11.25 1.5V2.55C11.25 2.97004 11.25 3.18006 11.1683 3.34049C11.0963 3.48161 10.9816 3.59635 10.8405 3.66825C10.6801 3.75 10.47 3.75 10.05 3.75H7.95C7.52996 3.75 7.31994 3.75 7.15951 3.66825C7.01839 3.59635 6.90365 3.48161 6.83175 3.34049C6.75 3.18006 6.75 2.97004 6.75 2.55V1.5M6.15 16.5H11.85C12.6901 16.5 13.1101 16.5 13.431 16.3365C13.7132 16.1927 13.9427 15.9632 14.0865 15.681C14.25 15.3601 14.25 14.9401 14.25 14.1V3.9C14.25 3.05992 14.25 2.63988 14.0865 2.31901C13.9427 2.03677 13.7132 1.8073 13.431 1.66349C13.1101 1.5 12.6901 1.5 11.85 1.5H6.15C5.30992 1.5 4.88988 1.5 4.56901 1.66349C4.28677 1.8073 4.0573 2.03677 3.91349 2.31901C3.75 2.63988 3.75 3.05992 3.75 3.9V14.1C3.75 14.9401 3.75 15.3601 3.91349 15.681C4.0573 15.9632 4.28677 16.1927 4.56901 16.3365C4.88988 16.5 5.30992 16.5 6.15 16.5Z" stroke={pathName === '/salephone' ? 'white' : '#7F3A8A'} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                                </svg>
-                                            </Box>
-                                            <Text as={'h6'} textColor={pathName === '/salephone' ? 'white' : '#7F3A8A'}  fontWeight={'bold'}>ขายโทรศัพท์</Text>
-                                        </Flex>
-                                    </Link>
                                     {/* ซ่อมโทรศัพท์ */}
-                                    <Link href={'/fixphone'}>
-                                        <Flex bg={pathName === '/fixphone' ? '#7F3A8A' : 'white'} alignItems={'center'} gap={2} p={2} rounded={'lg'} w={'full'}>
+                                        <Flex onClick={() => route.push('/fixphone')} bg={pathName === '/fixphone' ? '#7F3A8A' : 'white'} alignItems={'center'} gap={2} p={2} rounded={'lg'} w={'full'} >
                                             <Box w={'20px'} h={'20px'}>
                                                 <svg width="100%" height="100%" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M9 11.25C10.2426 11.25 11.25 10.2426 11.25 9C11.25 7.75736 10.2426 6.75 9 6.75C7.75736 6.75 6.75 7.75736 6.75 9C6.75 10.2426 7.75736 11.25 9 11.25Z" stroke={pathName === '/fixphone' ? 'white' : '#7F3A8A'} strokeLinecap="round" strokeLinejoin="round" />
@@ -49,10 +38,17 @@ const DrawerLayOut = ({ placement, onClose, isOpen }) => {
                                             </Box>
                                             <Text as={'h6'} textColor={pathName === '/fixphone' ? 'white' : '#7F3A8A'} fontWeight={'bold'}>ซ่อมโทรศัพท์</Text>
                                         </Flex>
-                                    </Link>
+                                    {/* ขายโทรศัพท์ */}
+                                        <Flex onClick={() => route.push('/salephone')} bg={pathName === '/salephone' ? '#7F3A8A' : 'white'} alignItems={'center'} gap={2} p={2} rounded={'lg'} w={'full'} >
+                                            <Box w={'20px'} h={'20px'}>
+                                                <svg width="100%" height="100%" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.25 1.5V2.55C11.25 2.97004 11.25 3.18006 11.1683 3.34049C11.0963 3.48161 10.9816 3.59635 10.8405 3.66825C10.6801 3.75 10.47 3.75 10.05 3.75H7.95C7.52996 3.75 7.31994 3.75 7.15951 3.66825C7.01839 3.59635 6.90365 3.48161 6.83175 3.34049C6.75 3.18006 6.75 2.97004 6.75 2.55V1.5M6.15 16.5H11.85C12.6901 16.5 13.1101 16.5 13.431 16.3365C13.7132 16.1927 13.9427 15.9632 14.0865 15.681C14.25 15.3601 14.25 14.9401 14.25 14.1V3.9C14.25 3.05992 14.25 2.63988 14.0865 2.31901C13.9427 2.03677 13.7132 1.8073 13.431 1.66349C13.1101 1.5 12.6901 1.5 11.85 1.5H6.15C5.30992 1.5 4.88988 1.5 4.56901 1.66349C4.28677 1.8073 4.0573 2.03677 3.91349 2.31901C3.75 2.63988 3.75 3.05992 3.75 3.9V14.1C3.75 14.9401 3.75 15.3601 3.91349 15.681C4.0573 15.9632 4.28677 16.1927 4.56901 16.3365C4.88988 16.5 5.30992 16.5 6.15 16.5Z" stroke={pathName === '/salephone' ? 'white' : '#7F3A8A'} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                                </svg>
+                                            </Box>
+                                            <Text as={'h6'} textColor={pathName === '/salephone' ? 'white' : '#7F3A8A'}  fontWeight={'bold'}>ขายโทรศัพท์</Text>
+                                        </Flex>
                                     {/* เกี่ยวกับเรา */}
-                                    <Link href={'/about'}>
-                                        <Flex bg={pathName === '/about' ? '#7F3A8A' : 'white'} alignItems={'center'} gap={2} p={2} rounded={'lg'} w={'full'}>
+                                        <Flex onClick={() => route.push('/about')} bg={pathName === '/about' ? '#7F3A8A' : 'white'} alignItems={'center'} gap={2} p={2} rounded={'lg'} w={'full'} >
                                             <Box w={'20px'} h={'20px'}>
                                                 <svg width="100%" height="100%" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M9 12V9M9 6H9.0075M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9Z" stroke={pathName === '/about' ? 'white' : '#7F3A8A'} strokeLinecap="round" strokeLinejoin="round" />
@@ -60,11 +56,9 @@ const DrawerLayOut = ({ placement, onClose, isOpen }) => {
                                             </Box>
                                             <Text as={'h6'} textColor={pathName === '/about' ? 'white' : '#7F3A8A'} fontWeight={'bold'}>เกี่ยวกับเรา</Text>
                                         </Flex>
-                                    </Link>
                                 </Flex>
                                 {/* ##### */}
-                                <Link href={'/'}>
-                                    <Flex alignItems={'center'} gap={2} p={2} rounded={'lg'} w={'full'} my={'1rem'}>
+                                    <Flex onClick={() => route.push('/')} alignItems={'center'} gap={2} p={2} rounded={'lg'} w={'full'} my={'1rem'} >
                                         <Box w={'20px'} h={'20px'}>
                                             <svg width="100%" height="100%" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M6.749 16.5L6.56102 13.8683C6.45996 12.4535 7.58054 11.25 8.999 11.25C10.4175 11.25 11.538 12.4535 11.437 13.8683L11.249 16.5" stroke="#7F3A8A" />
@@ -73,7 +67,6 @@ const DrawerLayOut = ({ placement, onClose, isOpen }) => {
                                         </Box>
                                         <Text as={'h6'} textColor={'white'} color={'#7F3A8A'} fontWeight={'bold'}>กลับไปยังหน้าแรก</Text>
                                     </Flex>
-                                </Link>
                             </Flex>
                             {/* Divider */}
                             <Box h={'2px'} w={'full'} bg={'#7F3A8A'}></Box>
