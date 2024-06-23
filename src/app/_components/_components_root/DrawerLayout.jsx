@@ -28,6 +28,15 @@ const DrawerLayOut = ({ placement, onClose, isOpen }) => {
                             <Text as={'h1'} color={'#7F3A8A'} fontSize={20} fontWeight={'bold'} my={'3rem'} textAlign={'center'}>TunTun Mobile</Text>
                             <Flex flexDirection={'column'} gap={2} w={'full'}>
                                 <Flex flexDirection={'column'} gap={2} w={'full'}>
+                                    {/* ขายโทรศัพท์ */}
+                                        <Flex onClick={() => route.push('/salephone')} bg={pathName === '/salephone' ? '#7F3A8A' : 'white'} alignItems={'center'} gap={2} p={2} rounded={'lg'} w={'full'} >
+                                            <Box w={'20px'} h={'20px'}>
+                                                <svg width="100%" height="100%" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.25 1.5V2.55C11.25 2.97004 11.25 3.18006 11.1683 3.34049C11.0963 3.48161 10.9816 3.59635 10.8405 3.66825C10.6801 3.75 10.47 3.75 10.05 3.75H7.95C7.52996 3.75 7.31994 3.75 7.15951 3.66825C7.01839 3.59635 6.90365 3.48161 6.83175 3.34049C6.75 3.18006 6.75 2.97004 6.75 2.55V1.5M6.15 16.5H11.85C12.6901 16.5 13.1101 16.5 13.431 16.3365C13.7132 16.1927 13.9427 15.9632 14.0865 15.681C14.25 15.3601 14.25 14.9401 14.25 14.1V3.9C14.25 3.05992 14.25 2.63988 14.0865 2.31901C13.9427 2.03677 13.7132 1.8073 13.431 1.66349C13.1101 1.5 12.6901 1.5 11.85 1.5H6.15C5.30992 1.5 4.88988 1.5 4.56901 1.66349C4.28677 1.8073 4.0573 2.03677 3.91349 2.31901C3.75 2.63988 3.75 3.05992 3.75 3.9V14.1C3.75 14.9401 3.75 15.3601 3.91349 15.681C4.0573 15.9632 4.28677 16.1927 4.56901 16.3365C4.88988 16.5 5.30992 16.5 6.15 16.5Z" stroke={pathName === '/salephone' ? 'white' : '#7F3A8A'} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                                </svg>
+                                            </Box>
+                                            <Text as={'h6'} textColor={pathName === '/salephone' ? 'white' : '#7F3A8A'}  fontWeight={'bold'}>ขายโทรศัพท์</Text>
+                                        </Flex>
                                     {/* ซ่อมโทรศัพท์ */}
                                         <Flex onClick={() => route.push('/fixphone')} bg={pathName === '/fixphone' ? '#7F3A8A' : 'white'} alignItems={'center'} gap={2} p={2} rounded={'lg'} w={'full'} >
                                             <Box w={'20px'} h={'20px'}>
@@ -37,15 +46,6 @@ const DrawerLayOut = ({ placement, onClose, isOpen }) => {
                                                 </svg>
                                             </Box>
                                             <Text as={'h6'} textColor={pathName === '/fixphone' ? 'white' : '#7F3A8A'} fontWeight={'bold'}>ซ่อมโทรศัพท์</Text>
-                                        </Flex>
-                                    {/* ขายโทรศัพท์ */}
-                                        <Flex onClick={() => route.push('/salephone')} bg={pathName === '/salephone' ? '#7F3A8A' : 'white'} alignItems={'center'} gap={2} p={2} rounded={'lg'} w={'full'} >
-                                            <Box w={'20px'} h={'20px'}>
-                                                <svg width="100%" height="100%" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M11.25 1.5V2.55C11.25 2.97004 11.25 3.18006 11.1683 3.34049C11.0963 3.48161 10.9816 3.59635 10.8405 3.66825C10.6801 3.75 10.47 3.75 10.05 3.75H7.95C7.52996 3.75 7.31994 3.75 7.15951 3.66825C7.01839 3.59635 6.90365 3.48161 6.83175 3.34049C6.75 3.18006 6.75 2.97004 6.75 2.55V1.5M6.15 16.5H11.85C12.6901 16.5 13.1101 16.5 13.431 16.3365C13.7132 16.1927 13.9427 15.9632 14.0865 15.681C14.25 15.3601 14.25 14.9401 14.25 14.1V3.9C14.25 3.05992 14.25 2.63988 14.0865 2.31901C13.9427 2.03677 13.7132 1.8073 13.431 1.66349C13.1101 1.5 12.6901 1.5 11.85 1.5H6.15C5.30992 1.5 4.88988 1.5 4.56901 1.66349C4.28677 1.8073 4.0573 2.03677 3.91349 2.31901C3.75 2.63988 3.75 3.05992 3.75 3.9V14.1C3.75 14.9401 3.75 15.3601 3.91349 15.681C4.0573 15.9632 4.28677 16.1927 4.56901 16.3365C4.88988 16.5 5.30992 16.5 6.15 16.5Z" stroke={pathName === '/salephone' ? 'white' : '#7F3A8A'} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                                </svg>
-                                            </Box>
-                                            <Text as={'h6'} textColor={pathName === '/salephone' ? 'white' : '#7F3A8A'}  fontWeight={'bold'}>ขายโทรศัพท์</Text>
                                         </Flex>
                                     {/* เกี่ยวกับเรา */}
                                         <Flex onClick={() => route.push('/about')} bg={pathName === '/about' ? '#7F3A8A' : 'white'} alignItems={'center'} gap={2} p={2} rounded={'lg'} w={'full'} >
