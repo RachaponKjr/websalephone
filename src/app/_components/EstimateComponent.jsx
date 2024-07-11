@@ -22,7 +22,7 @@ const EstimateComponent = ({ nextStep }) => {
                         </Box> */}
                             <Box h={{ base: '10rem', md: "22rem", lg: '16rem', xl: '22rem' }} ml={{ base: 0, lg: 4 }} position={'relative'} rounded={{ base: 'none', lg: 'none' }} p={2}>
                                 {/* <SwiperSlidePhone /> */}
-                                <Image src={"/banner.png"} fill objectFit='cover' objectPosition='center' alt='banner' />
+                                <Image src={"/banner.jpg"} fill objectFit='contain' objectPosition='center' alt='banner' />
                             </Box>
                         </Flex>
                         <Box w={{ base: '100%', md: '30rem' }} display={'flex'} justifyContent={'center'} px={4}>

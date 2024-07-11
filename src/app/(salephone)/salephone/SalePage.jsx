@@ -11,7 +11,7 @@ const SalePage = () => {
         <VStack spacing={"4rem"}>
           <ProductComponent headText={'โทรศัพท์'}>
             <BoxProductComponent headText={'สินค้าขายดี'}>
-              {Array.from({ length: 5 }).map((_, index) => (
+              {Array.from({ length: 4 }).map((_, index) => (
                 <>
                   <ItemProductComponent />
                 </>
